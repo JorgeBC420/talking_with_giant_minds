@@ -1,0 +1,4 @@
+Contact: https://github.com/JorgeBC420
+Expires: 2027-05-07T00:00:00.000Z
+Preferred-Languages: es, en
+Canonical: https://github.com/JorgeBC420/MateriaQueSePregunta/security/policy

@@ -1,0 +1,73 @@
+# GitHub Pages Configuration - Jekyll Settings
+# La Materia que se Pregunta
+
+# Site metadata
+title: La Materia que se Pregunta
+description: Un ensayo filosófico-científico sobre la realidad, la conciencia y la materia que se interroga a sí misma.
+author:
+  name: Jorge Eduardo Bravo Chaves
+  email: contact@jorgebc.dev
+  url: https://github.com/JorgeBC420
+
+# URLs and paths
+url: https://jorgebc420.github.io/MateriaQueSePregunta
+baseurl: /MateriaQueSePregunta
+repository: JorgeBC420/MateriaQueSePregunta
+
+# Theme and plugins
+theme: minima
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap
+
+# SEO and social
+social:
+  name: Jorge Eduardo Bravo Chaves
+  links:
+    - https://github.com/JorgeBC420
+
+# Build settings
+markdown: kramdown
+encoding: UTF-8
+exclude:
+  - .gitignore
+  - node_modules
+  - vendor
+  - .DS_Store
+  - Thumbs.db
+  - *.docx
+  - README.md
+
+# Pagination
+paginate: 5
+paginate_path: /page:num/
+
+# Permalink format
+permalink: /:year/:month/:day/:title/
+
+# Front matter defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+# Analytics (opcional - descomentar si usas)
+# google_analytics: UA-XXXXX-Y
+
+# Twitter/X integration (opcional)
+# twitter_username: tu_usuario
+
+# License information
+license:
+  name: Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+  url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+# Custom settings
+custom:
+  language: es
+  timezone: America/Costa_Rica
+  project_start: 2025-05-07
+  project_launch: 2026-05-07

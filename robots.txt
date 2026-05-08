@@ -1,0 +1,32 @@
+# Robots.txt - La Materia que se Pregunta
+# https://jorgebc420.github.io/MateriaQueSePregunta/
+
+# Allow all search engines
+User-agent: *
+Allow: /
+Disallow: /.*\.git/
+Disallow: /.github/
+Disallow: .*\.docx$
+Disallow: .*\.md$
+
+# Specific search engine rules
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+# Disallow bad bots
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://jorgebc420.github.io/MateriaQueSePregunta/sitemap.xml
