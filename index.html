@@ -1,1353 +1,771 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#1a1a1a">
-<meta name="keywords" content="filosofía, física, cosmología, ciencia, pensamiento, ensayo, libro gratis, Jorge Bravo">
-<meta name="author" content="Jorge Bravo Chaves">
-<meta name="copyright" content="© 2025-2026 Jorge Bravo Chaves. CC BY-NC-SA 4.0">
-<meta name="robots" content="index, follow">
-<meta name="language" content="es">
-<meta name="revisit-after" content="7 days">
-
-<title>Charlando con Mentes GIGANTES · Jorge Bravo Chaves</title>
-<meta name="description" content="Un ensayo sobre filosofía, física y el pensamiento humano. Distribución gratuita bajo licencia CC BY-NC-SA 4.0.">
-
-<!-- Open Graph (Redes Sociales) -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://jorgebc420.github.io/charlando_con_mentes_gigantes/">
-<meta property="og:title" content="Charlando con Mentes GIGANTES">
-<meta property="og:description" content="Filosofía, física y pensamiento. Un ensayo sobre los grandes temas que nos interrogan.">
-<meta property="og:locale" content="es_ES">
-<meta property="og:locale:alternate" content="en_US">
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Charlando con Mentes GIGANTES">
-<meta name="twitter:description" content="Ensayo filosófico-científico. Distribución gratuita.">
-
-<!-- Canonical URL -->
-<link rel="canonical" href="https://jorgebc420.github.io/charlando_con_mentes_gigantes/">
-<link rel="alternate" hreflang="es" href="https://jorgebc420.github.io/charlando_con_mentes_gigantes/">
-<link rel="alternate" hreflang="en" href="https://jorgebc420.github.io/charlando_con_mentes_gigantes/?lang=en">
-<link rel="alternate" hreflang="x-default" href="https://jorgebc420.github.io/charlando_con_mentes_gigantes/">
-
-<!-- Preconnect for Performance -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-
-<!-- Favicon -->
-<link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-family='serif'>∞</text></svg>">
-
-<style>
-  :root {
-    --granite: #1a1a1a;
-    --granite-mid: #252525;
-    --granite-light: #2e2e2e;
-    --granite-surface: #333333;
-    --gold: #c9a84c;
-    --gold-bright: #e8c66a;
-    --gold-dim: #8a6f2e;
-    --gold-glow: rgba(201,168,76,0.15);
-    --text-primary: #e8dfc8;
-    --text-secondary: #b8a882;
-    --text-dim: #7a6e5a;
-    --border: rgba(201,168,76,0.25);
-    --border-bright: rgba(201,168,76,0.5);
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  
-  body {
-    background: var(--granite);
-    color: var(--text-primary);
-    font-family: 'EB Garamond', Georgia, serif;
-    font-size: 18px;
-    line-height: 1.75;
-    overflow-x: hidden;
-  }
-
-  /* ---- TEXTURE OVERLAY ---- */
-  body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-    pointer-events: none;
-    z-index: 0;
-    opacity: 0.6;
-  }
-
-  /* ---- LANG SWITCHER ---- */
-  .lang-bar {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    background: rgba(18,18,18,0.92);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border);
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 10px 32px;
-    gap: 8px;
-  }
-
-  .lang-btn {
-    font-family: 'Cinzel', serif;
-    font-size: 12px;
-    letter-spacing: 0.12em;
-    padding: 6px 16px;
-    border: 1px solid var(--border);
-    background: transparent;
-    color: var(--text-secondary);
-    cursor: pointer;
-    transition: all 0.3s;
-    text-decoration: none;
-  }
-
-  .lang-btn:hover,
-  .lang-btn.active {
-    border-color: var(--gold);
-    color: var(--gold);
-    background: var(--gold-glow);
-  }
-
-  /* ---- HERO ---- */
-  .hero {
-    position: relative;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 120px 32px 80px;
-    overflow: hidden;
-  }
-
-  .hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(ellipse 70% 60% at 50% 40%, rgba(201,168,76,0.07) 0%, transparent 70%),
-      radial-gradient(ellipse 40% 30% at 20% 80%, rgba(201,168,76,0.04) 0%, transparent 60%);
-  }
-
-  .ornament {
-    font-family: 'Cinzel', serif;
-    color: var(--gold-dim);
-    font-size: 12px;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    margin-bottom: 32px;
-    opacity: 0;
-    animation: fadeUp 1s 0.2s forwards;
-  }
-
-  .hero-title {
-    font-family: 'Cinzel', serif;
-    font-size: clamp(2.8rem, 7vw, 6rem);
-    font-weight: 900;
-    line-height: 1.05;
-    color: var(--gold);
-    letter-spacing: 0.02em;
-    text-shadow: 0 0 80px rgba(201,168,76,0.3), 0 2px 4px rgba(0,0,0,0.8);
-    opacity: 0;
-    animation: fadeUp 1s 0.4s forwards;
-    margin-bottom: 16px;
-  }
-
-  .hero-subtitle {
-    font-family: 'Cinzel', serif;
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
-    font-weight: 400;
-    color: var(--text-secondary);
-    letter-spacing: 0.15em;
-    font-style: italic;
-    opacity: 0;
-    animation: fadeUp 1s 0.6s forwards;
-    margin-bottom: 40px;
-  }
-
-  .hero-divider {
-    width: 200px;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--gold), transparent);
-    margin: 0 auto 40px;
-    opacity: 0;
-    animation: fadeUp 1s 0.8s forwards;
-  }
-
-  .hero-author {
-    font-family: 'EB Garamond', serif;
-    font-size: 1.1rem;
-    color: var(--text-secondary);
-    letter-spacing: 0.08em;
-    opacity: 0;
-    animation: fadeUp 1s 1s forwards;
-    margin-bottom: 12px;
-  }
-
-  .hero-meta {
-    font-family: 'EB Garamond', serif;
-    font-size: 0.9rem;
-    color: var(--text-dim);
-    letter-spacing: 0.05em;
-    opacity: 0;
-    animation: fadeUp 1s 1.1s forwards;
-    margin-bottom: 56px;
-  }
-
-  .hero-actions {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-    justify-content: center;
-    opacity: 0;
-    animation: fadeUp 1s 1.3s forwards;
-  }
-
-  .btn-primary {
-    font-family: 'Cinzel', serif;
-    font-size: 13px;
-    letter-spacing: 0.15em;
-    padding: 14px 36px;
-    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dim) 100%);
-    color: #111;
-    border: none;
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 0.3s;
-    font-weight: 600;
-  }
-
-  .btn-primary:hover {
-    background: linear-gradient(135deg, var(--gold-bright) 0%, var(--gold) 100%);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(201,168,76,0.35);
-  }
-
-  .btn-secondary {
-    font-family: 'Cinzel', serif;
-    font-size: 13px;
-    letter-spacing: 0.15em;
-    padding: 13px 36px;
-    background: transparent;
-    color: var(--gold);
-    border: 1px solid var(--gold);
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 0.3s;
-  }
-
-  .btn-secondary:hover {
-    background: var(--gold-glow);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(201,168,76,0.15);
-  }
-
-  .scroll-hint {
-    position: absolute;
-    bottom: 32px;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    animation: fadeUp 1s 2s forwards;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .scroll-hint span {
-    font-family: 'Cinzel', serif;
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    color: var(--text-dim);
-  }
-
-  .scroll-line {
-    width: 1px;
-    height: 40px;
-    background: linear-gradient(180deg, var(--gold-dim), transparent);
-    animation: scrollPulse 2s ease-in-out infinite;
-  }
-
-  /* ---- SECTIONS ---- */
-  section {
-    position: relative;
-    z-index: 1;
-  }
-
-  .section-inner {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 80px 32px;
-  }
-
-  .section-label {
-    font-family: 'Cinzel', serif;
-    font-size: 11px;
-    letter-spacing: 0.35em;
-    text-transform: uppercase;
-    color: var(--gold-dim);
-    margin-bottom: 24px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
-
-  .section-label::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: linear-gradient(90deg, var(--border), transparent);
-  }
-
-  .section-title {
-    font-family: 'Cinzel', serif;
-    font-size: clamp(1.6rem, 3vw, 2.4rem);
-    font-weight: 600;
-    color: var(--gold);
-    margin-bottom: 32px;
-    line-height: 1.2;
-  }
-
-  .section-divider {
-    width: 80px;
-    height: 2px;
-    background: linear-gradient(90deg, var(--gold), var(--gold-dim));
-    margin-bottom: 40px;
-  }
-
-  /* ---- TABLE OF CONTENTS ---- */
-  #indice {
-    background: var(--granite-mid);
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-  }
-
-  .toc-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 2px;
-    background: var(--border);
-    margin-top: 40px;
-  }
-
-  .toc-chapter {
-    background: var(--granite);
-    padding: 28px;
-    border-left: 3px solid var(--gold-dim);
-    transition: all 0.3s;
-  }
-
-  .toc-chapter:hover {
-    background: var(--granite-light);
-    border-left-color: var(--gold);
-  }
-
-  .toc-chapter-title {
-    font-family: 'Cinzel', serif;
-    font-size: 0.95rem;
-    color: var(--gold);
-    font-weight: 600;
-    margin-bottom: 16px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-
-  .toc-subsections {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .toc-subsection {
-    font-size: 0.85rem;
-    color: var(--text-secondary);
-    padding-left: 12px;
-    border-left: 1px solid rgba(201,168,76,0.3);
-    line-height: 1.5;
-  }
-
-  /* ---- ABOUT ---- */
-  #acerca {
-    background: var(--granite);
-  }
-
-  .prose {
-    font-size: 1.05rem;
-    color: var(--text-primary);
-    line-height: 1.9;
-  }
-
-  .prose p {
-    margin-bottom: 1.4em;
-    text-align: justify;
-    hyphens: auto;
-  }
-
-  .prose .opener {
-    font-size: 1.25rem;
-    color: var(--text-secondary);
-    font-style: italic;
-    margin-bottom: 2em;
-  }
-
-  .prose blockquote {
-    border-left: 2px solid var(--gold);
-    padding-left: 24px;
-    margin: 2em 0;
-    color: var(--text-secondary);
-    font-style: italic;
-  }
-
-  /* ---- AUTHOR ---- */
-  #autor {
-    background: var(--granite-mid);
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-  }
-
-  .author-card {
-    border: 1px solid var(--border);
-    padding: 32px 28px;
-    background: var(--granite);
-    max-width: 500px;
-    margin: 0 auto;
-  }
-
-  .author-name {
-    font-family: 'Cinzel', serif;
-    font-size: 1.2rem;
-    color: var(--gold);
-    line-height: 1.3;
-    margin-bottom: 8px;
-  }
-
-  .author-location {
-    font-family: 'Cinzel', serif;
-    font-size: 11px;
-    letter-spacing: 0.2em;
-    color: var(--text-dim);
-    margin-bottom: 20px;
-  }
-
-  .author-tags {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .tag {
-    font-family: 'Cinzel', serif;
-    font-size: 10px;
-    letter-spacing: 0.15em;
-    color: var(--text-dim);
-    border: 1px solid var(--border);
-    padding: 5px 10px;
-    text-align: center;
-  }
-
-  /* ---- LICENSE ---- */
-  .license-block {
-    border: 1px solid var(--border);
-    padding: 28px 32px;
-    background: var(--granite);
-    margin-top: 32px;
-  }
-
-  .license-title {
-    font-family: 'Cinzel', serif;
-    font-size: 12px;
-    letter-spacing: 0.25em;
-    color: var(--gold-dim);
-    margin-bottom: 16px;
-  }
-
-  .license-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    margin-top: 16px;
-  }
-
-  .license-item {
-    text-align: center;
-  }
-
-  .license-icon {
-    font-family: 'Cinzel', serif;
-    font-size: 1.4rem;
-    color: var(--gold);
-    display: block;
-    margin-bottom: 6px;
-  }
-
-  .license-name {
-    font-family: 'Cinzel', serif;
-    font-size: 10px;
-    letter-spacing: 0.15em;
-    color: var(--text-dim);
-  }
-
-  /* ---- SUPPORT ---- */
-  #apoyo {
-    background: var(--granite-mid);
-    border-top: 1px solid var(--border);
-  }
-
-  .donation-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 16px;
-    margin-top: 40px;
-    margin-bottom: 32px;
-  }
-
-  .donation-card {
-    border: 1px solid var(--border);
-    padding: 24px 28px;
-    background: var(--granite);
-    transition: border-color 0.3s;
-  }
-
-  .donation-card:hover {
-    border-color: var(--border-bright);
-  }
-
-  .donation-platform {
-    font-family: 'Cinzel', serif;
-    font-size: 11px;
-    letter-spacing: 0.25em;
-    color: var(--gold-dim);
-    margin-bottom: 10px;
-  }
-
-  .donation-handle {
-    font-family: 'Cinzel', serif;
-    font-size: 1rem;
-    color: var(--gold);
-    margin-bottom: 6px;
-    word-break: break-all;
-  }
-
-  .donation-desc {
-    font-size: 0.85rem;
-    color: var(--text-dim);
-  }
-
-  /* ---- FOOTER ---- */
-  footer {
-    border-top: 1px solid var(--border);
-    padding: 48px 32px;
-    text-align: center;
-    background: #111;
-    position: relative;
-    z-index: 1;
-  }
-
-  .footer-title {
-    font-family: 'Cinzel', serif;
-    font-size: 1.4rem;
-    color: var(--gold);
-    margin-bottom: 8px;
-    letter-spacing: 0.05em;
-  }
-
-  .footer-sub {
-    font-size: 0.85rem;
-    color: var(--text-dim);
-    margin-bottom: 24px;
-  }
-
-  .footer-links {
-    display: flex;
-    gap: 24px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 32px;
-  }
-
-  .footer-link {
-    font-family: 'Cinzel', serif;
-    font-size: 11px;
-    letter-spacing: 0.15em;
-    color: var(--text-dim);
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-
-  .footer-link:hover { color: var(--gold); }
-
-  .footer-copy {
-    font-size: 0.8rem;
-    color: var(--text-dim);
-    margin-top: 16px;
-  }
-
-  /* ---- ANIMATIONS ---- */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  @keyframes scrollPulse {
-    0%, 100% { opacity: 0.4; transform: scaleY(1); }
-    50% { opacity: 1; transform: scaleY(1.2); }
-  }
-
-  /* ---- LANGUAGE SWITCHING ---- */
-  [data-lang="en"] { display: none; }
-  body.lang-en [data-lang="es"] { display: none; }
-  body.lang-en [data-lang="en"] { display: block; }
-  body.lang-en [data-lang="en"].inline { display: inline; }
-  body.lang-en [data-lang="en"].flex { display: flex; }
-  body.lang-en [data-lang="en"].grid { display: grid; }
-  [data-lang="en"].inline { display: none; }
-  [data-lang="en"].flex { display: none; }
-  [data-lang="en"].grid { display: none; }
-
-  /* ---- RESPONSIVE ---- */
-  @media (max-width: 768px) {
-    .hero-actions { flex-direction: column; align-items: center; }
-    .section-inner { padding: 60px 20px; }
-    .toc-grid { grid-template-columns: 1fr; }
-    .license-grid { grid-template-columns: 1fr; }
-    .donation-grid { grid-template-columns: 1fr; }
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Charlando con Mentes GIGANTES - Una obra de ficción-divulgación científica por Jorge Bravo Chaves">
+    <meta name="author" content="Jorge Bravo Chaves">
+    <meta name="keywords" content="filosofía, física, ciencia, educación, Costa Rica">
+    <meta property="og:title" content="Charlando con Mentes GIGANTES">
+    <meta property="og:description" content="Conversaciones ficticias con los grandes pensadores de la historia">
+    <meta property="og:type" content="book">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Charlando con Mentes GIGANTES · Jorge Bravo Chaves</title>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            font-family: 'EB Garamond', serif;
+            background: #18120d;
+            color: #2c2c2a;
+        }
+
+        body {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+            gap: 1rem;
+            padding: 0.5rem;
+            overflow: hidden;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                height: auto;
+                min-height: 100vh;
+            }
+        }
+
+        /* PANEL IZQUIERDO - TERMINAL */
+        .terminal-panel {
+            width: 450px;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #1a1a1a;
+            border-radius: 8px;
+            background: #111116;
+            color: #c9d1d9;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+            overflow: hidden;
+            z-index: 20;
+        }
+
+        @media (max-width: 768px) {
+            .terminal-panel {
+                width: 100%;
+                height: auto;
+                max-height: 60vh;
+            }
+        }
+
+        .terminal-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-bottom: 1px solid #000;
+            background: #0d0d12;
+            font-family: 'Courier New', monospace;
+            font-size: 0.6rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #888;
+        }
+
+        .terminal-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1.5rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+
+        .terminal-content::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .terminal-content::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .terminal-content::-webkit-scrollbar-thumb {
+            background: #2a2a35;
+            border-radius: 4px;
+        }
+
+        .terminal-title {
+            font-size: 1.5rem;
+            color: white;
+            letter-spacing: -0.02em;
+            border-left: 2px solid #22c55e;
+            padding-left: 0.75rem;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .terminal-subtitle {
+            color: #888;
+            font-size: 0.85rem;
+            margin-bottom: 2rem;
+        }
+
+        .terminal-menu {
+            margin-bottom: 2rem;
+        }
+
+        .menu-title {
+            color: #22c55e;
+            font-size: 0.7rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .menu-item {
+            display: block;
+            width: 100%;
+            text-align: left;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+            border: none;
+            background: transparent;
+            color: #8b949e;
+            cursor: pointer;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+            border-left: 2px solid transparent;
+        }
+
+        .menu-item:hover {
+            background: #2a2a35;
+            color: #c9d1d9;
+        }
+
+        .menu-item.active {
+            background: rgba(34, 197, 94, 0.1);
+            color: #22c55e;
+            font-weight: bold;
+            border-left: 2px solid #22c55e;
+            transform: translateX(0.25rem);
+        }
+
+        .terminal-section {
+            padding-top: 1.5rem;
+            border-top: 1px solid #2a2a35;
+            margin-top: 1.5rem;
+        }
+
+        .terminal-section-title {
+            color: #d4a373;
+            font-size: 0.7rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .support-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.7rem;
+            background: #1a1a24;
+            border: 1px solid #2a2a35;
+            padding: 0.75rem;
+            border-radius: 0.3rem;
+            margin-bottom: 0.5rem;
+            text-decoration: none;
+            color: #8b949e;
+            transition: all 0.2s;
+        }
+
+        .support-link:hover {
+            border-color: #d4a373;
+            color: #ffd700;
+        }
+
+        .terminal-base {
+            height: 2rem;
+            background: #1f1f1f;
+            border-top: 1px solid #000;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.8);
+        }
+
+        /* PANEL DERECHO - LIBRO */
+        .book-panel {
+            flex: 1;
+            background: #fdfaf3;
+            border: 1px solid #d4c5b0;
+            border-radius: 8px;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+            z-index: 10;
+        }
+
+        @media (max-width: 768px) {
+            .book-panel {
+                width: 100%;
+                height: auto;
+                min-height: 40vh;
+            }
+        }
+
+        .book-panel::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .book-panel::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .book-panel::-webkit-scrollbar-thumb {
+            background: #d4c5b0;
+            border-radius: 4px;
+        }
+
+        /* Cinta de marcapáginas */
+        .ribbon {
+            position: absolute;
+            top: 0;
+            right: 4rem;
+            width: 2rem;
+            height: 12rem;
+            background: #8b2323;
+            z-index: 5;
+            filter: drop-shadow(0 0 10px rgba(0,0,0,0.5));
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 90%, 0 100%);
+        }
+
+        .book-content {
+            max-width: 48rem;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        @media (max-width: 768px) {
+            .book-content {
+                padding: 2rem 1rem;
+            }
+        }
+
+        .book-header {
+            margin-bottom: 3rem;
+            text-align: center;
+            border-bottom: 1px solid #e1d5c5;
+            padding-bottom: 2rem;
+        }
+
+        .book-header-label {
+            font-size: 0.7rem;
+            font-family: 'Courier New', monospace;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #8c7b66;
+            opacity: 0.8;
+            margin-bottom: 1rem;
+        }
+
+        .book-header h1 {
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .book-header h1 {
+                font-size: 1.75rem;
+            }
+        }
+
+        .book-divider {
+            width: 3rem;
+            height: 0.25rem;
+            background: #d4a373;
+            margin: 0 auto;
+        }
+
+        .book-text {
+            line-height: 1.8;
+            font-size: 1.125rem;
+            text-align: justify;
+            color: #2c2c2a;
+        }
+
+        .book-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .book-placeholder {
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            opacity: 0.7;
+            margin-top: 8rem;
+        }
+
+        .book-placeholder h2 {
+            font-size: 2rem;
+            color: #1e1e1e;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        .book-placeholder p {
+            font-style: italic;
+            max-width: 28rem;
+            line-height: 1.6;
+            color: #6d6153;
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .book-placeholder-signature {
+            font-family: 'Courier New', monospace;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: #a39483;
+        }
+
+        /* Selector de idioma */
+        .language-selector {
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            display: flex;
+            gap: 0.5rem;
+            z-index: 100;
+        }
+
+        @media (max-width: 768px) {
+            .language-selector {
+                top: 0.5rem;
+                left: 0.5rem;
+            }
+        }
+
+        .lang-btn {
+            padding: 0.5rem 1rem;
+            border: 2px solid #d4a373;
+            background: transparent;
+            color: #d4a373;
+            cursor: pointer;
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            border-radius: 4px;
+        }
+
+        .lang-btn:hover {
+            background: #d4a373;
+            color: #18120d;
+        }
+
+        .lang-btn.active {
+            background: #d4a373;
+            color: #18120d;
+        }
+
+        /* Elementos decorativos */
+        .sticky-note {
+            position: absolute;
+            background: #ffea8c;
+            color: #3d3d29;
+            padding: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            border-top: 2rem solid #ffcc00;
+            font-family: 'Comic Sans MS', cursive;
+        }
+
+        .sticky-note-1 {
+            top: 2rem;
+            left: 2rem;
+            width: 10rem;
+            transform: rotate(-6deg);
+            display: none;
+        }
+
+        .sticky-note-2 {
+            top: 10rem;
+            left: 1.5rem;
+            width: 9rem;
+            transform: rotate(3deg);
+            display: none;
+        }
+
+        @media (min-width: 1200px) {
+            .sticky-note-1, .sticky-note-2 {
+                display: block;
+            }
+        }
+
+        /* Utilidades */
+        .hidden {
+            display: none !important;
+        }
+
+        .visible {
+            display: block !important;
+        }
+
+        /* Textura de papel */
+        .book-panel::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            opacity: 0.03;
+            pointer-events: none;
+            background-image: radial-gradient(#000 1px, transparent 1px);
+            background-size: 20px 20px;
+            mix-blend-mode: multiply;
+        }
+    </style>
 </head>
 <body>
-
-<!-- Language Switcher -->
-<nav class="lang-bar">
-  <button class="lang-btn active" id="btn-es" onclick="setLang('es')">ES</button>
-  <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
-</nav>
-
-<!-- ============================================================ HERO -->
-<section class="hero">
-  <div class="ornament" data-lang="es">Costa Rica · 2025–2026</div>
-  <div class="ornament" data-lang="en">Costa Rica · 2025–2026</div>
-
-  <h1 class="hero-title" data-lang="es">Charlando con<br>Mentes GIGANTES</h1>
-  <h1 class="hero-title" data-lang="en">Conversing with<br>GIANT Minds</h1>
-
-  <p class="hero-subtitle" data-lang="es">Un viaje por la filosofía, la física y el pensamiento humano</p>
-  <p class="hero-subtitle" data-lang="en">A journey through philosophy, physics, and human thought</p>
-
-  <div class="hero-divider"></div>
-
-  <p class="hero-author">Jorge Bravo Chaves</p>
-  <p class="hero-meta" data-lang="es">Distribución gratuita · CC BY-NC-SA 4.0</p>
-  <p class="hero-meta" data-lang="en">Free distribution · CC BY-NC-SA 4.0</p>
-
-  <div class="hero-actions">
-    <a href="Charlando_con_Mentes_GIGANTES_BILINGUE.pdf" class="btn-primary" data-lang="es" download>↓ Descargar PDF</a>
-    <a href="Charlando_con_Mentes_GIGANTES_BILINGUE.pdf" class="btn-primary" data-lang="en" download>↓ Download PDF</a>
-    <a href="#indice" class="btn-secondary" data-lang="es">Ver Índice</a>
-    <a href="#indice" class="btn-secondary" data-lang="en">View Index</a>
-  </div>
-
-  <div class="scroll-hint">
-    <span data-lang="es">EXPLORAR</span>
-    <span data-lang="en">EXPLORE</span>
-    <div class="scroll-line"></div>
-  </div>
-</section>
-
-<!-- ============================================================ TABLE OF CONTENTS -->
-<section id="indice">
-  <div class="section-inner">
-    <!-- SPANISH -->
-    <div data-lang="es">
-      <div class="section-label">Contenido</div>
-      <h2 class="section-title">Índice Completo</h2>
-      <div class="section-divider"></div>
-      <div class="toc-grid">
-        <!-- Prólogo -->
-        <div class="toc-chapter">
-          <div class="toc-chapter-title">Prólogo</div>
-          <div class="toc-subsections">
-            <div class="toc-subsection">Una introducción al libro</div>
-          </div>
-        </div>
-
-        <!-- Story -->
-        <div class="toc-chapter">
-          <div class="toc-chapter-title">El hombre en la terminal de San José</div>
-          <div class="toc-subsections">
-            <div class="toc-subsection">El encuentro que comienza todo</div>
-          </div>
-        </div>
-
-        <!-- Capítulo 1 -->
-        <div class="toc-chapter">
-          <div class="toc-chapter-title">Capítulo 1 — El horizonte del observador</div>
-          <div class="toc-subsections">
-            <div class="toc-subsection">I. El límite del ojo</div>
-            <div class="toc-subsection">II. El tiempo que envejece</div>
-            <div class="toc-subsection">III. Las partículas que nadie prometió</div>
-            <div class="toc-subsection">IV. La gravedad que no necesita permiso</div>
-            <div class="toc-subsection">V. El vacío que no succiona</div>
-            <div class="toc-subsection">VI. Chichén Itzá y el astrónomo maya</div>
-            <div class="toc-subsection">VII. La estrella que cambia de lugar</div>
-            <div class="toc-subsection">VIII. Las cinco latas y el experimento involuntario</div>
-            <div class="toc-subsection">IX. La coherencia que no se puede falsificar por partes</div>
-            <div class="toc-subsection">X. La fotografía que no puede ser CGI</div>
-            <div class="toc-subsection">XI. La duda que abre y la duda que cierra</div>
-          </div>
-        </div>
-
-        <!-- Capítulo 2 -->
-        <div class="toc-chapter">
-          <div class="toc-chapter-title">Capítulo 2 — La forma del cosmos</div>
-          <div class="toc-subsections">
-            <div class="toc-subsection">I. Tres preguntas para una noche</div>
-            <div class="toc-subsection">II. La música que no se escucha</div>
-            <div class="toc-subsection">III. El modelo que desplaza al modelo</div>
-            <div class="toc-subsection">IV. El mundo que no se toca</div>
-            <div class="toc-subsection">V. La simulación y la caverna</div>
-            <div class="toc-subsection">VI. El orden matemático como lenguaje</div>
-            <div class="toc-subsection">VII. La mente que prefiere la ficción</div>
-          </div>
-        </div>
-
-        <!-- Interludio I -->
-        <div class="toc-chapter">
-          <div class="toc-chapter-title">✦ Interludio I — Charles Darwin</div>
-          <div class="toc-subsections">
-            <div class="toc-subsection">I. El mayor malentendido de la historia</div>
-            <div class="toc-subsection">II. El mecanismo: selección natural</div>
-            <div class="toc-subsection">III. El rastro: de lo unicelular a lo vertebrado</div>
-            <div class="toc-subsection">IV. Lo que la evolución no es</div>
-            <div class="toc-subsection">V. La valentía de publicar</div>
-            <div class="toc-subsection">VI. La evolución del pensamiento</div>
-          </div>
-        </div>
-
-        <!-- Capítulo 3 -->
-        <div class="toc-chapter">
-          <div class="toc-chapter-title">Capítulo 3 — Las leyes que nadie puede sobornar</div>
-          <div class="toc-subsections">
-            <div class="toc-subsection">I. El video que lo agrupa todo</div>
-            <div class="toc-subsection">II. El ocultista que medía el universo</div>
-            <div class="toc-subsection">III. El error de la pureza retrospectiva</div>
-            <div class="toc-subsection">IV. La gravedad que no acepta sobornos</div>
-            <div class="toc-subsection">V. El experimento que cualquiera puede hacer</div>
-            <div class="toc-subsection">VI. El villano con cara</div>
-            <div class="toc-subsection">VII. El control real y la ignorancia autoimpuesta</div>
-            <div class="toc-subsection">VIII. El tatuaje de Piscis</div>
-            <div class="toc-subsection">IX. La pregunta que desarma todo el capítulo</div>
-          </div>
-        </div>
-
-        <!-- Capítulo 4 -->
-        <div class="toc-chapter">
-          <div class="toc-chapter-title">Capítulo 4 — La frecuencia del ruido</div>
-          <div class="toc-subsections">
-            <div class="toc-subsection">I. Tres señales, un mismo estático</div>
-            <div class="toc-subsection">II. El CERN y el portal que no existe</div>
-            <div class="toc-subsection">III. La Resonancia de Schumann y el ruido emocional</div>
-            <div class="toc-subsection">IV. Las frecuencias del control mental</div>
-            <div class="toc-subsection">V. La anatomía del ruido</div>
-            <div class="toc-subsection">VI. La Resonancia real</div>
-            <div class="toc-subsection">VII. La vibración que sí existe</div>
-            <div class="toc-subsection">VIII. Cómo se calibra el receptor</div>
-            <div class="toc-subsection">IX. El receptor que decide</div>
-          </div>
-        </div>
-
-        <!-- Capítulo 5 -->
-        <div class="toc-chapter">
-          <div class="toc-chapter-title">Capítulo 5 — El tejido del espacio-tiempo</div>
-          <div class="toc-subsections">
-            <div class="toc-subsection">I. La pregunta que parece simple</div>
-            <div class="toc-subsection">II. La antimateria que sí existe</div>
-            <div class="toc-subsection">III. El problema de las coordenadas absolutas</div>
-            <div class="toc-subsection">IV. La hipótesis que no es teoría</div>
-            <div class="toc-subsection">V. El núcleo que no se puede ver pero sí medir</div>
-            <div class="toc-subsection">VI. El mapa que delata al modelo</div>
-            <div class="toc-subsection">VII. La estrella polar que cambia de nombre</div>
-            <div class="toc-subsection">VIII. La fotografía que rompió el origen</div>
-            <div class="toc-subsection">IX. Lo que el James Webb no puede ver todavía</div>
-            <div class="toc-subsection">X. El andamiaje de la existencia</div>
-          </div>
-        </div>
-
-        <!-- Interludio II -->
-        <div class="toc-chapter">
-          <div class="toc-chapter-title">✦ Interludio II — Pasteur · Nightingale · Salk · Curie</div>
-          <div class="toc-subsections">
-            <div class="toc-subsection">I. El padre de los gérmenes</div>
-            <div class="toc-subsection">II. La mujer que contó los muertos</div>
-            <div class="toc-subsection">III. La vacuna que no se patentó</div>
-            <div class="toc-subsection">IV. Lo invisible que mata y lo invisible que sana</div>
-            <div class="toc-subsection">V. El precio de lo que funciona</div>
-            <div class="toc-subsection">VI. Lo que cuesta ser la primera</div>
-            <div class="toc-subsection">VII. La herencia de lo invisible</div>
-            <div class="toc-subsection">VIII. La pregunta de Sócrates</div>
-          </div>
-        </div>
-
-        <!-- Interludio III -->
-        <div class="toc-chapter">
-          <div class="toc-chapter-title">✦ Interludio III — La hipótesis del nodo</div>
-          <div class="toc-subsections">
-            <div class="toc-subsection">I. Jorge escribe</div>
-            <div class="toc-subsection">II. Los supuestos</div>
-            <div class="toc-subsection">III. El CMB y la singularidad</div>
-            <div class="toc-subsection">IV. Las predicciones</div>
-            <div class="toc-subsection">V. Lo que los Gigantes no validan</div>
-            <div class="toc-subsection">VI. Lo que queda en la terminal</div>
-          </div>
-        </div>
-
-        <!-- Capítulo 6 -->
-        <div class="toc-chapter">
-          <div class="toc-chapter-title">Capítulo 6 — La herencia cognitiva</div>
-          <div class="toc-subsections">
-            <div class="toc-subsection">I. El inventario de la noche</div>
-            <div class="toc-subsection">II. El código que no se escribe desde cero</div>
-            <div class="toc-subsection">III. El nodo en la red</div>
-            <div class="toc-subsection">IV. El sabotaje del conocimiento</div>
-            <div class="toc-subsection">V. La responsabilidad del nodo</div>
-            <div class="toc-subsection">VI. El balance de la noche</div>
-            <div class="toc-subsection">VII. Lo que Jorge deja</div>
-          </div>
-        </div>
-
-        <!-- Capítulo 7 -->
-        <div class="toc-chapter">
-          <div class="toc-chapter-title">Capítulo 7 — La red de perspectivas</div>
-          <div class="toc-subsections">
-            <div class="toc-subsection">I. El problema del observador</div>
-            <div class="toc-subsection">II. El relativismo y su trampa</div>
-            <div class="toc-subsection">III. La calibración como proceso</div>
-            <div class="toc-subsection">IV. Perspectivas que se contradicen</div>
-            <div class="toc-subsection">V. La perspectiva de San José</div>
-            <div class="toc-subsection">VI. La verdad como red, no como punto</div>
-            <div class="toc-subsection">VII. La noche antes del cierre</div>
-          </div>
-        </div>
-
-        <!-- Capítulo 8 -->
-        <div class="toc-chapter">
-          <div class="toc-chapter-title">Capítulo 8 — El cierre</div>
-          <div class="toc-subsections">
-            <div class="toc-subsection">I. La síntesis</div>
-            <div class="toc-subsection">II. La interrupción</div>
-            <div class="toc-subsection">III. La pregunta que no es mía</div>
-            <div class="toc-subsection">IV. Lo que los Gigantes no dijeron</div>
-            <div class="toc-subsection">V. El nudo de la red</div>
-            <div class="toc-subsection">VI. Epílogo sin palabras</div>
-          </div>
-        </div>
-
-        <!-- Apéndices -->
-        <div class="toc-chapter">
-          <div class="toc-chapter-title">Apéndice A — Debug de Mitos Modernos</div>
-          <div class="toc-subsections">
-            <div class="toc-subsection">Mito 1: La Tierra es plana</div>
-            <div class="toc-subsection">Mito 2: El núcleo terrestre no existe</div>
-            <div class="toc-subsection">Mito 3: El CERN abre portales dimensionales</div>
-            <div class="toc-subsection">Mito 4: Las vacunas causan enfermedades</div>
-            <div class="toc-subsection">Mito 5: El 5G controla la mente</div>
-            <div class="toc-subsection">Mito 6: El tiempo es un constructo social</div>
-            <div class="toc-subsection">Mito 7: La vibración Tesla y frecuencias sanadoras</div>
-          </div>
-        </div>
-
-        <div class="toc-chapter">
-          <div class="toc-chapter-title">Apéndice B — Guía Didáctica</div>
-          <div class="toc-subsections">
-            <div class="toc-subsection">Recurso para educadores y estudiantes</div>
-            <div class="toc-subsection">Preguntas generadoras por capítulo</div>
-            <div class="toc-subsection">Conexiones con disciplinas actuales</div>
-          </div>
-        </div>
-      </div>
+    <!-- Selector de idioma -->
+    <div class="language-selector">
+        <button class="lang-btn active" onclick="setLanguage('es')">ES</button>
+        <button class="lang-btn" onclick="setLanguage('en')">EN</button>
     </div>
 
-    <!-- ENGLISH -->
-    <div data-lang="en">
-      <div class="section-label">Content</div>
-      <h2 class="section-title">Complete Index</h2>
-      <div class="section-divider"></div>
-      <div class="toc-grid">
-        <!-- Prologue -->
-        <div class="toc-chapter">
-          <div class="toc-chapter-title">Prologue</div>
-          <div class="toc-subsections">
-            <div class="toc-subsection">An introduction to the book</div>
-          </div>
+    <!-- Elementos decorativos -->
+    <div class="sticky-note sticky-note-1">Dudar para precisión</div>
+    <div class="sticky-note sticky-note-2">Pensar para construir</div>
+
+    <!-- Contenedor principal -->
+    <div class="container">
+        <!-- PANEL IZQUIERDO: TERMINAL -->
+        <div class="terminal-panel">
+            <div class="terminal-header">
+                <span style="color: #666; margin-right: auto;">●</span>
+                <span>TERMINAL - JORGE BRAVO</span>
+            </div>
+
+            <div class="terminal-content" id="terminalContent">
+                <div class="terminal-title">
+                    Charlando con<br>
+                    <span style="color: #22c55e; font-style: italic;">Mentes GIGANTES</span>
+                </div>
+                <div class="terminal-subtitle">Por <span style="color: white;">Jorge Bravo Chaves</span></div>
+
+                <div class="terminal-menu">
+                    <div class="menu-title">
+                        <span>◉</span> <span id="catalogTitle">~/_Catálogo_Módulos</span>
+                    </div>
+                    <button class="menu-item active" data-section="prefacio" onclick="selectSection('prefacio')">$ Prefacio</button>
+                    <button class="menu-item" data-section="cap5" onclick="selectSection('cap5')">$ Capítulo 5 — El tejido del espacio-tiempo</button>
+                    <button class="menu-item" data-section="hipotesis" onclick="selectSection('hipotesis')">$ Hipótesis de transición sectorial</button>
+                </div>
+
+                <div class="terminal-section">
+                    <div class="terminal-section-title">
+                        <span>🔒</span> Licencia
+                    </div>
+                    <p style="font-size: 0.7rem; color: #8b949e; line-height: 1.6;">
+                        Distribuido bajo la licencia Creative Commons Atribución-NoComercial-CompartirIgual 4.0 (CC BY-NC-SA 4.0).
+                    </p>
+                </div>
+
+                <div class="terminal-section">
+                    <div class="terminal-section-title">
+                        <span>❤️</span> <span id="supportTitle">Apoyo a la Obra</span>
+                    </div>
+                    <a href="https://ko-fi.com/jorgebravochaves" target="_blank" class="support-link">
+                        <span>[ko-fi]</span> /jorgebravochaves
+                    </a>
+                    <a href="https://paypal.me/JorgeBravoChaves" target="_blank" class="support-link">
+                        <span>[paypal]</span> @JorgeBravoChaves
+                    </a>
+                    <div style="display: flex; justify-content: space-between; font-size: 0.7rem; background: #181822; border: 1px solid #2a2a35; padding: 0.75rem; border-radius: 0.3rem;">
+                        <span style="color: #8b949e;">SINPE_Móvil</span>
+                        <span style="color: #d4a373; letter-spacing: 0.15em;">71880297</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="terminal-base"></div>
         </div>
 
-        <!-- Story -->
-        <div class="toc-chapter">
-          <div class="toc-chapter-title">The man at the terminal in San José</div>
-          <div class="toc-subsections">
-            <div class="toc-subsection">The encounter that begins everything</div>
-          </div>
-        </div>
+        <!-- PANEL DERECHO: LIBRO -->
+        <div class="book-panel">
+            <div class="ribbon"></div>
 
-        <!-- Chapter 1 -->
-        <div class="toc-chapter">
-          <div class="toc-chapter-title">Chapter 1 — The Observer's Horizon</div>
-          <div class="toc-subsections">
-            <div class="toc-subsection">I. The Limit of the Eye</div>
-            <div class="toc-subsection">II. The Time That Ages</div>
-            <div class="toc-subsection">III. The Particles Nobody Promised</div>
-            <div class="toc-subsection">IV. The Gravity That Needs No Permission</div>
-            <div class="toc-subsection">V. The Vacuum That Does Not Suck</div>
-            <div class="toc-subsection">VI. Chichén Itzá and the Mayan Astronomer</div>
-            <div class="toc-subsection">VII. The Star That Changes Position</div>
-            <div class="toc-subsection">VIII. The Five Cans and the Involuntary Experiment</div>
-            <div class="toc-subsection">IX. The Coherence That Cannot Be Falsified in Parts</div>
-            <div class="toc-subsection">X. The Photograph That Cannot Be CGI</div>
-            <div class="toc-subsection">XI. The Doubt That Opens and the Doubt That Closes</div>
-          </div>
-        </div>
+            <div class="book-content">
+                <!-- PREFACIO -->
+                <div id="content-prefacio" class="content-section visible">
+                    <div class="book-header">
+                        <div class="book-header-label">Introducción</div>
+                        <h1>Prefacio</h1>
+                        <div class="book-divider"></div>
+                    </div>
+                    <div class="book-text" id="prefacioText"></div>
+                </div>
 
-        <!-- Chapter 2 -->
-        <div class="toc-chapter">
-          <div class="toc-chapter-title">Chapter 2 — The Shape of the Cosmos</div>
-          <div class="toc-subsections">
-            <div class="toc-subsection">I. Three Questions for One Night</div>
-            <div class="toc-subsection">II. The Music That Cannot Be Heard</div>
-            <div class="toc-subsection">III. The Model That Displaces the Model</div>
-            <div class="toc-subsection">IV. The World That Cannot Be Touched</div>
-            <div class="toc-subsection">V. The Simulation and the Cave</div>
-            <div class="toc-subsection">VI. Mathematical Order as Language</div>
-            <div class="toc-subsection">VII. The Mind That Prefers Fiction</div>
-          </div>
-        </div>
+                <!-- CAPÍTULO 5 -->
+                <div id="content-cap5" class="content-section hidden">
+                    <div class="book-header">
+                        <div class="book-header-label">Capítulo 5</div>
+                        <h1>El tejido del espacio-tiempo</h1>
+                        <div class="book-divider"></div>
+                    </div>
+                    <div class="book-text" id="cap5Text"></div>
+                </div>
 
-        <!-- Interlude I -->
-        <div class="toc-chapter">
-          <div class="toc-chapter-title">✦ Interlude I — Charles Darwin</div>
-          <div class="toc-subsections">
-            <div class="toc-subsection">I. The Greatest Misunderstanding in History</div>
-            <div class="toc-subsection">II. The Mechanism: Natural Selection</div>
-            <div class="toc-subsection">III. The Trail: From Unicellular to Vertebrate</div>
-            <div class="toc-subsection">IV. What Evolution Is Not</div>
-            <div class="toc-subsection">V. The Courage to Publish</div>
-            <div class="toc-subsection">VI. The Evolution of Thought</div>
-          </div>
-        </div>
+                <!-- HIPÓTESIS -->
+                <div id="content-hipotesis" class="content-section hidden">
+                    <div class="book-header">
+                        <div class="book-header-label">Anexo Técnico</div>
+                        <h1>Hipótesis de transición sectorial</h1>
+                        <div class="book-divider"></div>
+                    </div>
+                    <div class="book-text" id="hipotesisText"></div>
+                </div>
 
-        <!-- Chapter 3 -->
-        <div class="toc-chapter">
-          <div class="toc-chapter-title">Chapter 3 — The Laws That No One Can Bribe</div>
-          <div class="toc-subsections">
-            <div class="toc-subsection">I. The Video That Groups It All</div>
-            <div class="toc-subsection">II. The Occultist Who Measured the Universe</div>
-            <div class="toc-subsection">III. The Error of Retrospective Purity</div>
-            <div class="toc-subsection">IV. The Gravity That Accepts No Bribes</div>
-            <div class="toc-subsection">V. The Experiment Anyone Can Do</div>
-            <div class="toc-subsection">VI. The Villain with a Face</div>
-            <div class="toc-subsection">VII. Real Control and Self-Imposed Ignorance</div>
-            <div class="toc-subsection">VIII. The Pisces Tattoo</div>
-            <div class="toc-subsection">IX. The Question That Dismantles the Whole Chapter</div>
-          </div>
+                <!-- PLACEHOLDER -->
+                <div id="content-placeholder" class="content-section hidden">
+                    <div class="book-placeholder">
+                        <div style="width: 8rem; height: 8rem; border: 2px solid #8c7b66; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 2rem; background: transparent; position: relative;">
+                            <div style="position: absolute; width: 7rem; height: 7rem; border: 1px solid #d4a373; border-radius: 50%; opacity: 0.3;"></div>
+                            <span style="font-size: 3rem; color: #8c7b66;">📖</span>
+                        </div>
+                        <h2 id="placeholderTitle">Sección</h2>
+                        <div style="width: 4rem; height: 0.25rem; background: #d4a373; margin: 2rem auto;"></div>
+                        <p id="placeholderText">«El único lugar donde el tiempo no puede silenciarlas: el pensamiento escrito.»</p>
+                        <p class="book-placeholder-signature">- J.B.C.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <!-- Chapter 4 -->
-        <div class="toc-chapter">
-          <div class="toc-chapter-title">Chapter 4 — The Frequency of Noise</div>
-          <div class="toc-subsections">
-            <div class="toc-subsection">I. Three Signals, One Static</div>
-            <div class="toc-subsection">II. CERN and the Portal That Does Not Exist</div>
-            <div class="toc-subsection">III. The Schumann Resonance and Emotional Noise</div>
-            <div class="toc-subsection">IV. The Frequencies of Mind Control</div>
-            <div class="toc-subsection">V. The Anatomy of Noise</div>
-            <div class="toc-subsection">VI. The Real Resonance</div>
-            <div class="toc-subsection">VII. The Vibration That Does Exist</div>
-            <div class="toc-subsection">VIII. How to Calibrate the Receiver</div>
-            <div class="toc-subsection">IX. The Receiver That Decides</div>
-          </div>
-        </div>
-
-        <!-- Chapter 5 -->
-        <div class="toc-chapter">
-          <div class="toc-chapter-title">Chapter 5 — The Fabric of Spacetime</div>
-          <div class="toc-subsections">
-            <div class="toc-subsection">I. The Question That Seems Simple</div>
-            <div class="toc-subsection">II. The Antimatter That Does Exist</div>
-            <div class="toc-subsection">III. The Problem of Absolute Coordinates</div>
-            <div class="toc-subsection">IV. The Hypothesis That Is Not a Theory</div>
-            <div class="toc-subsection">V. The Core That Cannot Be Seen but Can Be Measured</div>
-            <div class="toc-subsection">VI. The Map That Betrays the Model</div>
-            <div class="toc-subsection">VII. The Polar Star That Changes Its Name</div>
-            <div class="toc-subsection">VIII. The Photograph That Broke the Origin</div>
-            <div class="toc-subsection">IX. What the James Webb Cannot Yet See</div>
-            <div class="toc-subsection">X. The Scaffolding of Existence</div>
-          </div>
-        </div>
-
-        <!-- Interlude II -->
-        <div class="toc-chapter">
-          <div class="toc-chapter-title">✦ Interlude II — Pasteur · Nightingale · Salk · Curie</div>
-          <div class="toc-subsections">
-            <div class="toc-subsection">I. The Father of Germs</div>
-            <div class="toc-subsection">II. The Woman Who Counted the Dead</div>
-            <div class="toc-subsection">III. The Vaccine That Was Not Patented</div>
-            <div class="toc-subsection">IV. The Invisible That Kills and the Invisible That Heals</div>
-            <div class="toc-subsection">V. The Price of What Works</div>
-            <div class="toc-subsection">VI. What It Costs to Be First</div>
-            <div class="toc-subsection">VII. The Inheritance of the Invisible</div>
-            <div class="toc-subsection">VIII. Socrates' Question</div>
-          </div>
-        </div>
-
-        <!-- Interlude III -->
-        <div class="toc-chapter">
-          <div class="toc-chapter-title">✦ Interlude III — The Node's Hypothesis</div>
-          <div class="toc-subsections">
-            <div class="toc-subsection">I. Jorge Writes</div>
-            <div class="toc-subsection">II. The Assumptions</div>
-            <div class="toc-subsection">III. The CMB and the Singularity</div>
-            <div class="toc-subsection">IV. The Predictions</div>
-            <div class="toc-subsection">V. What the Giants Do Not Validate</div>
-            <div class="toc-subsection">VI. What Remains in the Terminal</div>
-          </div>
-        </div>
-
-        <!-- Chapter 6 -->
-        <div class="toc-chapter">
-          <div class="toc-chapter-title">Chapter 6 — The Cognitive Inheritance</div>
-          <div class="toc-subsections">
-            <div class="toc-subsection">I. The Inventory of the Night</div>
-            <div class="toc-subsection">II. The Code That Is Not Written from Scratch</div>
-            <div class="toc-subsection">III. The Node in the Network</div>
-            <div class="toc-subsection">IV. The Sabotage of Knowledge</div>
-            <div class="toc-subsection">V. The Responsibility of the Node</div>
-            <div class="toc-subsection">VI. The Balance of the Night</div>
-            <div class="toc-subsection">VII. What Jorge Leaves</div>
-          </div>
-        </div>
-
-        <!-- Chapter 7 -->
-        <div class="toc-chapter">
-          <div class="toc-chapter-title">Chapter 7 — The Network of Perspectives</div>
-          <div class="toc-subsections">
-            <div class="toc-subsection">I. The Problem of the Observer</div>
-            <div class="toc-subsection">II. Relativism and Its Trap</div>
-            <div class="toc-subsection">III. Calibration as Process</div>
-            <div class="toc-subsection">IV. Perspectives That Contradict</div>
-            <div class="toc-subsection">V. The Perspective of San José</div>
-            <div class="toc-subsection">VI. Truth as Network, Not as Point</div>
-            <div class="toc-subsection">VII. The Night Before the Close</div>
-          </div>
-        </div>
-
-        <!-- Chapter 8 -->
-        <div class="toc-chapter">
-          <div class="toc-chapter-title">Chapter 8 — The Close</div>
-          <div class="toc-subsections">
-            <div class="toc-subsection">I. The Synthesis</div>
-            <div class="toc-subsection">II. The Interruption</div>
-            <div class="toc-subsection">III. The Question That Is Not Mine</div>
-            <div class="toc-subsection">IV. What the Giants Did Not Say</div>
-            <div class="toc-subsection">V. The Knot of the Network</div>
-            <div class="toc-subsection">VI. Epilogue Without Words</div>
-          </div>
-        </div>
-
-        <!-- Appendices -->
-        <div class="toc-chapter">
-          <div class="toc-chapter-title">Appendix A — A Debug of Modern Myths</div>
-          <div class="toc-subsections">
-            <div class="toc-subsection">Myth 1: The Earth Is Flat</div>
-            <div class="toc-subsection">Myth 2: The Earth's Core Does Not Exist</div>
-            <div class="toc-subsection">Myth 3: CERN Opens Dimensional Portals</div>
-            <div class="toc-subsection">Myth 4: Vaccines Cause Diseases</div>
-            <div class="toc-subsection">Myth 5: 5G Controls the Mind</div>
-            <div class="toc-subsection">Myth 6: Time Is a Social Construct</div>
-            <div class="toc-subsection">Myth 7: Tesla Vibration and Healing Frequencies</div>
-          </div>
-        </div>
-
-        <div class="toc-chapter">
-          <div class="toc-chapter-title">Appendix B — Teaching Guide</div>
-          <div class="toc-subsections">
-            <div class="toc-subsection">Resource for educators and students</div>
-            <div class="toc-subsection">Generative questions by chapter</div>
-            <div class="toc-subsection">Connections with contemporary disciplines</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================ ABOUT -->
-<section id="acerca">
-  <div class="section-inner">
-    <!-- SPANISH -->
-    <div data-lang="es">
-      <div class="section-label">Acerca del Libro</div>
-      <h2 class="section-title">Un viaje a través del conocimiento</h2>
-      <div class="section-divider"></div>
-      <div class="prose">
-        <p class="opener">Este ensayo reúne reflexiones sobre filosofía, física, cosmología y el pensamiento humano.</p>
-        <p>A lo largo de ocho capítulos más tres interludios, el autor navega por preguntas fundamentales: ¿qué es real? ¿cómo conocemos? ¿cuál es nuestro lugar en el universo? El libro no pretende tener todas las respuestas, sino invitar al lector a pensar críticamente sobre los grandes temas que nos interrogan.</p>
-        <p>Con un rigor investigativo riguroso y una prosa accesible, "Charlando con Mentes GIGANTES" conecta con pensadores del pasado (Darwin, Pasteur, Curie) y desafíos contemporáneos, siempre con la intención de despertar curiosidad y reflexión profunda.</p>
-      </div>
     </div>
 
-    <!-- ENGLISH -->
-    <div data-lang="en">
-      <div class="section-label">About the Book</div>
-      <h2 class="section-title">A journey through knowledge</h2>
-      <div class="section-divider"></div>
-      <div class="prose">
-        <p class="opener">This essay brings together reflections on philosophy, physics, cosmology, and human thought.</p>
-        <p>Across eight chapters plus three interludes, the author navigates fundamental questions: What is real? How do we know? What is our place in the universe? The book does not claim to have all the answers, but rather invites the reader to think critically about the great themes that question us.</p>
-        <p>With rigorous investigative rigor and accessible prose, "Conversing with GIANT Minds" connects with thinkers of the past (Darwin, Pasteur, Curie) and contemporary challenges, always with the intention of awakening curiosity and deep reflection.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    <script>
+        // Textos en español
+        const texts_es = {
+            prefacio: `"Charlando con Mentes GIGANTES" es una obra de ficción-divulgación científica donde algunos de los pensadores y científicos más influyentes de la historia "regresan" para conversar sobre las dudas, teorías y confusiones de la era digital.
 
-<!-- ============================================================ AUTHOR -->
-<section id="autor">
-  <div class="section-inner">
-    <!-- SPANISH -->
-    <div data-lang="es">
-      <div class="section-label">Sobre el Autor</div>
-      <h2 class="section-title">Pensador independiente</h2>
-      <div class="section-divider"></div>
-      <div class="author-card">
-        <div class="author-name">Jorge Bravo Chaves</div>
-        <div class="author-location">Costa Rica</div>
-        <div class="author-tags">
-          <div class="tag">Pensador Independiente</div>
-          <div class="tag">Investigador</div>
-          <div class="tag">Ensayista</div>
-          <div class="tag">Filósofo</div>
-        </div>
-      </div>
-    </div>
+Estas conversaciones no son reconstrucciones históricas literales. Las voces de Sócrates, Pitágoras, Platón, Galileo, Newton, Tesla, Einstein, Darwin y los demás gigantes que aparecen en estas páginas son interpretaciones modernas de sus ideas, métodos y formas de razonar, adaptadas a una época donde el acceso masivo a la información convive con algo igual de masivo: la desinformación.
 
-    <!-- ENGLISH -->
-    <div data-lang="en">
-      <div class="section-label">About the Author</div>
-      <h2 class="section-title">Independent thinker</h2>
-      <div class="section-divider"></div>
-      <div class="author-card">
-        <div class="author-name">Jorge Bravo Chaves</div>
-        <div class="author-location">Costa Rica</div>
-        <div class="author-tags">
-          <div class="tag">Independent Thinker</div>
-          <div class="tag">Researcher</div>
-          <div class="tag">Essayist</div>
-          <div class="tag">Philosopher</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+Vivimos en una era donde cualquier persona puede aprender astronomía, física, biología o filosofía desde un teléfono. Pero también vivimos en una era donde una mentira atractiva puede recorrer el mundo antes de que la verdad termine de explicar cómo funciona realmente un eclipse.
 
-<!-- ============================================================ LICENSE -->
-<section id="licencia">
-  <div class="section-inner">
-    <!-- SPANISH -->
-    <div data-lang="es">
-      <div class="license-block">
-        <div class="license-title">DERECHOS DE DISTRIBUCIÓN · CC BY-NC-SA 4.0</div>
-        <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:20px;">Distribución gratuita por convicción. Esta obra es propiedad intelectual de Jorge Bravo Chaves.</p>
-        <div class="license-grid">
-          <div class="license-item">
-            <span class="license-icon">BY</span>
-            <div class="license-name">Atribución</div>
-          </div>
-          <div class="license-item">
-            <span class="license-icon">NC</span>
-            <div class="license-name">No Comercial</div>
-          </div>
-          <div class="license-item">
-            <span class="license-icon">SA</span>
-            <div class="license-name">Compartir Igual</div>
-          </div>
-        </div>
-      </div>
-    </div>
+Este libro no fue escrito para burlarse de quien duda. Fue escrito para recordar que existen dos tipos de duda: la que busca entender mejor la realidad y la que nace del miedo, la confusión o el ruido constante de las redes. La primera construye conocimiento. La segunda destruye la confianza incluso en aquello que generaciones enteras ya lograron comprender.
 
-    <!-- ENGLISH -->
-    <div data-lang="en">
-      <div class="license-block">
-        <div class="license-title">DISTRIBUTION RIGHTS · CC BY-NC-SA 4.0</div>
-        <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:20px;">Free distribution by conviction. This work is the intellectual property of Jorge Bravo Chaves.</p>
-        <div class="license-grid">
-          <div class="license-item">
-            <span class="license-icon">BY</span>
-            <div class="license-name">Attribution</div>
-          </div>
-          <div class="license-item">
-            <span class="license-icon">NC</span>
-            <div class="license-name">NonCommercial</div>
-          </div>
-          <div class="license-item">
-            <span class="license-icon">SA</span>
-            <div class="license-name">ShareAlike</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+Mi madre me enseñó los eclipses usando bolas y focos. Me enseñó que preguntar era bueno y que entender el mundo era algo hermoso. Este libro existe para que personas como ella no vuelvan a desconfiar de la realidad por culpa de la desinformación disfrazada de revelación.
 
-<!-- ============================================================ SUPPORT -->
-<section id="apoyo">
-  <div class="section-inner">
-    <!-- SPANISH -->
-    <div data-lang="es">
-      <div class="section-label">Apoyo Voluntario</div>
-      <h2 class="section-title">El conocimiento debe llegar</h2>
-      <div class="section-divider"></div>
-      <p style="font-size: 1.05rem; color: var(--text-secondary); font-style: italic; margin-bottom: 48px; max-width: 600px;">El acceso a esta obra es gratuito por convicción. Si este trabajo le ha aportado valor, puede apoyar su continuidad.</p>
-      <div class="donation-grid">
-        <div class="donation-card">
-          <a href="https://ko-fi.com/jorgebravochaves" target="_blank">
-            <div class="donation-platform">Ko-fi</div>
-            <div class="donation-handle">ko-fi.com/jorgebravochaves</div>
-            <div class="donation-desc">Apoyo internacional · tarjeta o PayPal</div>
-          </a>
-        </div>
-        <div class="donation-card">
-          <div class="donation-platform">PayPal</div>
-          <div class="donation-handle">@JorgeBravoChaves</div>
-          <div class="donation-desc">Transferencia internacional directa</div>
-        </div>
-        <div class="donation-card">
-          <div class="donation-platform">SINPE Móvil · Costa Rica</div>
-          <div class="donation-handle">71880297</div>
-          <div class="donation-desc">Transferencia local instantánea</div>
-        </div>
-      </div>
-    </div>
+Y también existe para mi hija, Kiara.
 
-    <!-- ENGLISH -->
-    <div data-lang="en">
-      <div class="section-label">Voluntary Support</div>
-      <h2 class="section-title">Knowledge must reach its reader</h2>
-      <div class="section-divider"></div>
-      <p style="font-size: 1.05rem; color: var(--text-secondary); font-style: italic; margin-bottom: 48px; max-width: 600px;">Access to this work is free by conviction. If it has been of value to you, you can support its continuation.</p>
-      <div class="donation-grid">
-        <div class="donation-card">
-          <a href="https://ko-fi.com/jorgebravochaves" target="_blank">
-            <div class="donation-platform">Ko-fi</div>
-            <div class="donation-handle">ko-fi.com/jorgebravochaves</div>
-            <div class="donation-desc">International support · card or PayPal</div>
-          </a>
-        </div>
-        <div class="donation-card">
-          <div class="donation-platform">PayPal</div>
-          <div class="donation-handle">@JorgeBravoChaves</div>
-          <div class="donation-desc">Direct international transfer</div>
-        </div>
-        <div class="donation-card">
-          <div class="donation-platform">SINPE Móvil · Costa Rica</div>
-          <div class="donation-handle">71880297</div>
-          <div class="donation-desc">Instant local transfer (Costa Rica)</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+Para que crezca entendiendo que la curiosidad es más importante que el ego. Que preguntar nunca debe dar vergüenza. Que cambiar de opinión frente a la evidencia no es debilidad, sino honestidad intelectual. Y que la duda más valiosa no es la que rechaza todo, sino la que aprende cuándo confiar, cuándo cuestionar y cómo pensar.
 
-<!-- ============================================================ FOOTER -->
-<footer>
-  <div class="footer-title">Charlando con Mentes GIGANTES</div>
-  <div class="footer-sub">Jorge Bravo Chaves · Costa Rica · 2025–2026</div>
-  <div class="footer-links">
-    <a href="Charlando_con_Mentes_GIGANTES_BILINGUE.pdf" class="footer-link" download data-lang="es">Descargar PDF</a>
-    <a href="Charlando_con_Mentes_GIGANTES_BILINGUE.pdf" class="footer-link" download data-lang="en">Download PDF</a>
-    <a href="#indice" class="footer-link" data-lang="es">Índice</a>
-    <a href="#indice" class="footer-link" data-lang="en">Index</a>
-    <a href="https://ko-fi.com/jorgebravochaves" class="footer-link" target="_blank">Ko-fi</a>
-    <a href="#apoyo" class="footer-link" data-lang="es">Apoyar</a>
-    <a href="#apoyo" class="footer-link" data-lang="en">Support</a>
-  </div>
-  <div class="footer-copy">
-    CC BY-NC-SA 4.0 · Distribución gratuita · Free distribution
-  </div>
-</footer>
+Las conversaciones que siguen nunca ocurrieron.
+Y, quizás, siempre han ocurrido.
 
-<script>
-function setLang(lang) {
-  document.body.classList.toggle('lang-en', lang === 'en');
-  document.getElementById('btn-es').classList.toggle('active', lang === 'es');
-  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-  document.documentElement.lang = lang === 'en' ? 'en' : 'es';
-  document.title = lang === 'en'
-    ? 'Conversing with GIANT Minds · Jorge Bravo Chaves'
-    : 'Charlando con Mentes GIGANTES · Jorge Bravo Chaves';
-  try { localStorage.setItem('lang', lang); } catch(e) {}
-}
+Porque mientras exista alguien dispuesto a hacerse preguntas reales, las grandes mentes del pasado nunca estarán completamente en silencio.`,
 
-// Restore language preference
-try {
-  const saved = localStorage.getItem('lang');
-  if (saved === 'en') setLang('en');
-} catch(e) {}
+            cap5: `El tejido del espacio-tiempo no es tan simple como nos enseñaron. Durante décadas, nos acostumbramos a un modelo cómodo: la teoría del Big Bang. Esta idea de que el universo comenzó en un punto de densidad infinita, un momento de creación singular desde donde todo se expandió.
 
-// Intersection Observer for section animations
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.style.opacity = '1';
-      e.target.style.transform = 'translateY(0)';
-    }
-  });
-}, { threshold: 0.1 });
+Sin embargo, en la sala donde debaten las Mentes Gigantes, algunas piezas no encajan. Fred Hoyle pide la palabra. A Hoyle se le marginó por décadas por negarse a aceptar el dogma de un "inicio absoluto" y por defender su Teoría del Estado Estacionario, donde el universo es eterno. Como en una hábil auditoría epistémica, Hoyle nos recuerda que el Big Bang fue abrazado rápidamente en Occidente, en gran parte, porque se alineaba de manera reconfortante con la cosmovisión teológica judeocristiana de un Génesis lineal. Era más fácil aceptar un "hágase la luz" con fecha de caducidad que enfrentar el vacío aterrador de un universo infinito sin principio ni final.
 
-document.querySelectorAll('.toc-chapter, .donation-card').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(16px)';
-  el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-  observer.observe(el);
-});
-</script>
+Y así, mientras Newton y Einstein debaten las coordenadas formales y la geometría del cosmos, un nuevo observador irrumpe: el Telescopio Espacial James Webb.
 
-<!-- Schema.org Structured Data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Book",
-  "name": "Charlando con Mentes GIGANTES",
-  "author": {
-    "@type": "Person",
-    "name": "Jorge Bravo Chaves",
-    "url": "https://github.com/JorgeBC420"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Jorge Bravo Chaves"
-  },
-  "datePublished": "2026-05-19",
-  "description": "Un ensayo sobre filosofía, física, cosmología y pensamiento humano.",
-  "keywords": "filosofía, física, cosmología, pensamiento, ciencia, ensayo",
-  "url": "https://jorgebc420.github.io/charlando_con_mentes_gigantes/",
-  "inLanguage": ["es", "en"],
-  "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-  "isAccessibleForFree": true,
-  "educationalLevel": "PostSecondaryEducation",
-  "genre": ["Philosophy", "Science", "Non-fiction"],
-  "fileFormat": "text/html"
-}
-</script>
+El James Webb no es solo un avance óptico; entra en la sala como el juez definitivo de este debate cosmológico. Al adentrarse en las profundidades del llamado "amanecer cósmico", nos devolvió no bebés en formación, sino galaxias enormes y organizadas, rascacielos estelares como JADES-GS-z14-0 que contienen trazas de oxígeno donde el "modelo estándar" dictaba que solo debía haber gas informe. Al presentarnos luz de galaxias tan maduras que no deberían existir en los plazos estipulados por el Big Bang, el Webb evidencia la fragilidad de nuestra cronología.
 
+A esta revelación se le une el físico Bruno Bento y la perspectiva cuántica de la Teoría de Conjuntos Causales. Para Bento, el espacio-tiempo no es un lienzo continuo que surgió "de la nada", sino que está formado por "átomos espaciales" eternos. Bajo este foco, la singularidad—esa densidad infinita donde las matemáticas se rompen y la teología interviene—simplemente desaparece.
+
+La "gran expansión" que nosotros atestiguamos, aquel corrimiento al rojo y el fondo cósmico de microondas que usamos para enterrar las ideas de Hoyle, bien pueden ser solo la dinámica transicional en un diminuto vecindario de un universo inmenso e imperecedero. Lo que percibimos hoy no es más que la luz abriéndose paso hasta nuestras limitadas herramientas a través de las escalas infinitas del universo. El problema nunca fue el cosmos: fue nuestro intento narcisista de ponerle un "Día Cero" a algo que siempre ha sido y será.
+
+Aceptar que el universo puede no tener inicio, nos obliga a abandonar el confort teológico. Como todo en la ciencia, debemos aceptar que creíamos tener la respuesta, cuando solo estábamos iluminando la orilla y pensábamos que el océano terminaba allí. Seguíamos (y en gran parte, seguimos) a oscuras.`,
+
+            hipotesis: `Hipótesis de transición sectorial cosmológica
+
+Se propone una hipótesis cosmológica cautelosa según la cual el Big Bang describe la transición fundacional de un sector observable del universo, no necesariamente el inicio absoluto de toda la realidad física. El objetivo no es reemplazar la cosmología estándar, sino delimitar su alcance ontológico.
+
+Definiciones operativas:
+Sea U la totalidad física.
+Sea S₀ ⊂ U el sector cosmológico observable.
+
+La edad efectiva del sector S₀ se denota por t₀, y la antigüedad total del universo por t_U. La tesis central es:
+t₀ ≠ t_U en general.
+
+Es decir, la edad inferida del sector observable no debe identificarse automáticamente con la edad ontológica total.
+
+Supuestos mínimos:
+A1. La relatividad general describe correctamente la evolución efectiva de S₀.
+A2. La totalidad U puede contener sectores con historias no sincronizadas.
+A3. El Big Bang corresponde a una transición térmica-dinámica temprana de S₀.
+A4. Los observables cosmológicos son locales al sector, no pruebas directas del origen absoluto de U.
+
+JADES como tensión observacional:
+JADES-GS-z14-0 presenta redshift extremo y evidencia de oxígeno, lo que implica madurez química temprana. En esta hipótesis, JADES es evidencia de que algunos objetos del sector observable alcanzaron complejidad química antes de lo esperado, cuestionando si nuestro reloj cosmológico mide desde una transición local.
+
+Predicciones observables:
+P1. Agrupamiento regional de madurez
+P2. Desacople entre métricas de edad
+P3. Reorganización gravitacional extensiva
+P4. Homogeneidad interna del CMB, no ontológica
+
+Conclusión:
+La hipótesis de transición sectorial no niega el Big Bang ni la relatividad general. Los toma como correctos dentro del sector observable y propone que su alcance ontológico sea local, no absoluto.`
+        };
+
+        // Textos en inglés
+        const texts_en = {
+            prefacio: `"Conversing with GIANT Minds" is a work of scientific fiction and dissemination where some of the most influential thinkers and scientists in history "return" to converse about the doubts, theories, and confusions of the digital age.
+
+These conversations are not literal historical reconstructions. The voices of Socrates, Pythagoras, Plato, Galileo, Newton, Tesla, Einstein, Darwin, and the other giants that appear in these pages are modern interpretations of their ideas, methods, and ways of reasoning, adapted to an era where massive access to information coexists with something equally massive: misinformation.
+
+We live in an era where anyone can learn astronomy, physics, biology, or philosophy from a phone. But we also live in an era where an attractive lie can travel the world before the truth finishes explaining how an eclipse actually works.
+
+This book was not written to mock those who doubt. It was written to remind us that there are two types of doubt: the one that seeks to better understand reality and the one born of fear, confusion, or the constant noise of networks. The first builds knowledge. The second destroys trust even in what entire generations have already managed to understand.
+
+My mother taught me about eclipses using spheres and light bulbs. She taught me that asking questions was good and that understanding the world was a beautiful thing. This book exists so that people like her never again distrust reality due to misinformation disguised as revelation.
+
+And it also exists for my daughter, Kiara.
+
+So she can grow up understanding that curiosity is more important than ego. That asking questions should never bring shame. That changing one's mind in the face of evidence is not weakness, but intellectual honesty. And that the most valuable doubt is not the one that rejects everything, but the one that learns when to trust, when to question, and how to think.
+
+The conversations that follow never happened.
+And, perhaps, they have always happened.
+
+Because as long as someone is willing to ask real questions, the great minds of the past will never be completely silent.`,
+
+            cap5: `The fabric of spacetime is not as simple as we were taught. For decades, we grew accustomed to a comfortable model: the Big Bang theory. This idea that the universe began at a point of infinite density, a singular moment of creation from which everything expanded.
+
+However, in the room where the Giant Minds debate, some pieces don't fit. Fred Hoyle asks to speak. Hoyle was marginalized for decades for refusing to accept the dogma of an "absolute beginning" and for defending his Steady State Theory, where the universe is eternal. Like a skilled epistemic auditor, Hoyle reminds us that the Big Bang was quickly embraced in the West largely because it comfortingly aligned with the Judeo-Christian theological worldview of a linear Genesis. It was easier to accept a "let there be light" with an expiration date than to face the terrifying void of an infinite universe with no beginning or end.
+
+And so, while Newton and Einstein debate the formal coordinates and geometry of the cosmos, a new observer bursts in: the James Webb Space Telescope.
+
+The James Webb is not just an optical breakthrough; it enters the room as the definitive judge of this cosmological debate. By delving into the depths of the so-called "cosmic dawn," it returned not babies in formation, but enormous and organized galaxies, stellar skyscrapers like JADES-GS-z14-0 containing traces of oxygen where the "standard model" dictated there should only be shapeless gas. By showing us light from galaxies so mature that they should not exist within the timeframes stipulated by the Big Bang, Webb exposes the fragility of our chronology.
+
+Joining this revelation is physicist Bruno Bento and the quantum perspective of Causal Set Theory. For Bento, spacetime is not a continuous canvas that emerged "from nothing," but is formed by eternal "spatial atoms." Under this spotlight, the singularity—that infinite density where mathematics break down and theology intervenes—simply vanishes.
+
+The "great expansion" that we witness, that redshift and the cosmic microwave background we used to bury Hoyle's ideas, very well could just be the transitional dynamics in a tiny neighborhood of an immense and imperishable universe. What we perceive today is nothing more than light making its way to our limited tools across the infinite scales of the universe. The problem was never the cosmos: it was our narcissistic attempt to put a "Day Zero" on something that has always been and will always be.
+
+Accepting that the universe may have no beginning forces us to abandon theological comfort. Like everything in science, we must accept that we thought we had the answer, when we were only illuminating the shore and thought the ocean ended there. We were (and largely remain) in the dark.`,
+
+            hipotesis: `Cosmological Sectorial Transition Hypothesis
+
+A cautious cosmological hypothesis is proposed according to which the Big Bang describes the foundational transition of an observable sector of the universe, not necessarily the absolute beginning of all physical reality. The goal is not to replace standard cosmology, but to delimit its ontological scope.
+
+Operational Definitions:
+Let U be the physical totality.
+Let S₀ ⊂ U be the observable cosmological sector.
+
+The effective age of sector S₀ is denoted by t₀, and the total age of the universe by t_U. The central thesis is:
+t₀ ≠ t_U in general.
+
+That is, the inferred age of the observable sector should not be automatically identified with the total ontological age.
+
+Minimum Assumptions:
+A1. General relativity correctly describes the effective evolution of S₀.
+A2. The totality U may contain sectors with non-synchronized histories.
+A3. The Big Bang corresponds to an early thermal-dynamic transition of S₀.
+A4. Cosmological observables are local to the sector, not direct proofs of the absolute origin of U.
+
+JADES as Observational Tension:
+JADES-GS-z14-0 presents extreme redshift and evidence of oxygen, which implies early chemical maturity. In this hypothesis, JADES is evidence that some objects in the observable sector reached chemical complexity earlier than expected.
+
+Observable Predictions:
+P1. Regional Clustering of Maturity
+P2. Decoupling between Age Metrics
+P3. Extensive Gravitational Reorganization
+P4. Internal CMB Homogeneity, not Ontological
+
+Conclusion:
+The sectorial transition hypothesis does not deny the Big Bang or general relativity. It takes them as correct within the observable sector and proposes that their ontological scope is local, not absolute.`
+        };
+
+        let currentLanguage = localStorage.getItem('language') || 'es';
+
+        function setLanguage(lang) {
+            currentLanguage = lang;
+            localStorage.setItem('language', lang);
+            
+            // Actualizar botones
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // Actualizar etiquetas
+            document.getElementById('catalogTitle').textContent = lang === 'es' ? '~/_Catálogo_Módulos' : '~/_Module_Catalog';
+            document.getElementById('supportTitle').textContent = lang === 'es' ? 'Apoyo a la Obra' : 'Support the Work';
+            
+            // Actualizar contenido si hay una sección visible
+            const activeBtn = document.querySelector('.menu-item.active');
+            if (activeBtn) {
+                const section = activeBtn.getAttribute('data-section');
+                selectSection(section);
+            }
+        }
+
+        function selectSection(section) {
+            // Ocultar todos
+            document.querySelectorAll('.content-section').forEach(el => {
+                el.classList.remove('visible');
+                el.classList.add('hidden');
+            });
+            document.querySelectorAll('.menu-item').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Mostrar seleccionado
+            const contentEl = document.getElementById(`content-${section}`);
+            if (contentEl) {
+                contentEl.classList.remove('hidden');
+                contentEl.classList.add('visible');
+                
+                // Buscar botón y marcarlo
+                document.querySelector(`[data-section="${section}"]`).classList.add('active');
+                
+                // Cargar texto
+                const texts = currentLanguage === 'es' ? texts_es : texts_en;
+                
+                if (section === 'prefacio') {
+                    document.getElementById('prefacioText').textContent = texts.prefacio;
+                } else if (section === 'cap5') {
+                    document.getElementById('cap5Text').textContent = texts.cap5;
+                } else if (section === 'hipotesis') {
+                    document.getElementById('hipotesisText').textContent = texts.hipotesis;
+                }
+            }
+        }
+
+        // Cargar contenido inicial
+        selectSection('prefacio');
+        
+        // Establecer idioma guardado
+        if (currentLanguage === 'en') {
+            document.querySelectorAll('.lang-btn')[1].classList.add('active');
+            document.querySelectorAll('.lang-btn')[0].classList.remove('active');
+        }
+    </script>
 </body>
 </html>
-
