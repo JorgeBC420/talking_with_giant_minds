@@ -232,15 +232,15 @@ export default function App() {
          }}
     >
       {/* Decorative Desk Elements */}
-      <div className="hidden lg:block absolute top-8 left-8 transform -rotate-6 bg-[#ffea8c] text-[#3d3d29] p-4 shadow-lg w-40 z-30 font-['Comic_Sans_MS'] border-t-8 border-amber-300">
+      <div className="hidden lg:block absolute top-8 right-12 transform -rotate-6 bg-[#ffea8c] text-[#3d3d29] p-4 shadow-lg w-40 z-30 font-['Comic_Sans_MS'] border-t-8 border-amber-300">
         Dudar para precisión
       </div>
-      <div className="hidden xl:flex absolute top-40 left-6 transform rotate-3 bg-[#ffea8c] text-[#3d3d29] p-4 shadow-lg w-36 z-30 font-['Comic_Sans_MS'] border-t-8 border-amber-300">
+      <div className="hidden xl:flex absolute top-40 right-6 transform rotate-3 bg-[#ffea8c] text-[#3d3d29] p-4 shadow-lg w-36 z-30 font-['Comic_Sans_MS'] border-t-8 border-amber-300">
         Pensar para construir
       </div>
 
       {/* Ideas Notebook */}
-      <div className="hidden 2xl:flex absolute top-12 left-[500px] transform -rotate-2 bg-[#fdf8ed] text-slate-800 p-6 shadow-[10px_10px_30px_rgba(0,0,0,0.8)] w-56 z-10 font-['Comic_Sans_MS'] border-l-[12px] border-slate-900 flex-col gap-2 rounded-r-md">
+      <div className="hidden 2xl:flex absolute top-12 right-[420px] transform -rotate-2 bg-[#fdf8ed] text-slate-800 p-6 shadow-[10px_10px_30px_rgba(0,0,0,0.8)] w-56 z-10 font-['Comic_Sans_MS'] border-l-[12px] border-slate-900 flex-col gap-2 rounded-r-md">
         <h3 className="font-bold border-b-2 border-red-400 pb-1 mb-2">IDEAS</h3>
         <ul className="list-disc pl-4 space-y-1 text-sm">
           <li>Electricidad</li>
@@ -560,7 +560,7 @@ export default function App() {
       </div>
       
       {/* Coffee Mug simulating the image */}
-      <div className="hidden xl:flex absolute bottom-8 left-[450px] z-30 transform -rotate-12 w-32 h-32 rounded-full border-4 border-slate-900 bg-[#0d0a08] shadow-[15px_15px_20px_rgba(0,0,0,0.9)] items-center justify-center">
+      <div className="hidden xl:flex absolute bottom-10 right-16 z-30 transform rotate-6 w-32 h-32 rounded-full border-4 border-slate-900 bg-[#0d0a08] shadow-[15px_15px_20px_rgba(0,0,0,0.9)] items-center justify-center">
         <div className="absolute -right-4 top-1/2 -translate-y-1/2 w-8 h-12 border-4 border-slate-900 rounded-r-2xl bg-transparent"></div>
         <div className="w-28 h-28 rounded-full border border-slate-700 bg-[radial-gradient(ellipse_at_center,_#3c2211_0%,_#170c05_100%)] flex flex-col items-center justify-center text-center p-2 text-slate-500 font-mono text-[7px] leading-tight opacity-70">
           <Coffee size={16} className="text-slate-600 mb-1" />
