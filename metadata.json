@@ -1,0 +1,43 @@
+{
+  "book": {
+    "title": "Charlando con Mentes GIGANTES",
+    "titleEn": "Conversing with GIANT Minds",
+    "author": "Jorge Bravo Chaves",
+    "year": 2026,
+    "description": "Un ensayo sobre filosofía, física, cosmología y el pensamiento humano.",
+    "descriptionEn": "An essay on philosophy, physics, cosmology, and human thought.",
+    "language": ["es", "en"],
+    "license": "CC BY-NC-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "country": "Costa Rica",
+    "distribution": "free",
+    "fileFormats": ["PDF", "HTML", "Web"]
+  },
+  "chapters": {
+    "total": 8,
+    "interludes": 3,
+    "appendices": 2
+  },
+  "pdf": {
+    "filename": "Charlando_con_Mentes_GIGANTES_BILINGUE.pdf",
+    "bilingual": true,
+    "languages": ["es", "en"],
+    "format": "A4",
+    "suggested_tool": "LaTeX or Pandoc with bilingual support"
+  },
+  "website": {
+    "url": "https://jorgebc420.github.io/charlando_con_mentes_gigantes/",
+    "language_switcher": true,
+    "supports": ["Desktop", "Tablet", "Mobile"]
+  },
+  "author_info": {
+    "name": "Jorge Bravo Chaves",
+    "country": "Costa Rica",
+    "website": "https://github.com/JorgeBC420",
+    "contact": {
+      "ko-fi": "https://ko-fi.com/jorgebravochaves",
+      "paypal": "@JorgeBravoChaves",
+      "sinpe_costa_rica": "71880297"
+    }
+  }
+}
