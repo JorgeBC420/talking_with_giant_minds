@@ -10,7 +10,6 @@
 <meta name="robots" content="index, follow">
 <meta name="language" content="es">
 <meta name="revisit-after" content="7 days">
-<meta name="google-site-verification" content="IwZSJcrtDEIY6jI_7gg18JAJiKAjdwyO3Jg9lE_DZCg" />
 
 <title>La Materia que se Pregunta · Jorge Eduardo Bravo Chaves</title>
 <meta name="description" content="Un ensayo filosófico-científico sobre la realidad, la conciencia y la materia que se interroga a sí misma. Distribución gratuita bajo licencia CC BY-NC-SA 4.0.">
@@ -822,6 +821,63 @@
     line-height: 1.6;
   }
 
+  /* ---- CONNECT SECTION ---- */
+  #conectar {
+    background: var(--granite);
+  }
+
+  .connect-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+  }
+
+  .connect-category {
+    border: 1px solid var(--border);
+    padding: 28px;
+    background: var(--granite-mid);
+    transition: all 0.3s;
+  }
+
+  .connect-category:hover {
+    border-color: var(--border-bright);
+    background: var(--granite-light);
+  }
+
+  .connect-label {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--gold-dim);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+
+  .connect-item {
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .connect-item a {
+    color: var(--gold);
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    transition: color 0.3s;
+  }
+
+  .connect-item a:hover {
+    color: var(--gold-bright);
+  }
+
+  .connect-item p {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    margin-top: 4px;
+  }
+
   /* ---- FOOTER ---- */
   footer {
     border-top: 1px solid var(--border);
@@ -887,6 +943,7 @@
     .author-layout { grid-template-columns: 1fr; }
     .license-grid { grid-template-columns: 1fr; }
     .cases-grid { grid-template-columns: 1fr; }
+    .connect-links { grid-template-columns: 1fr; }
     .case-header { flex-direction: column; }
     .hero-actions { flex-direction: column; align-items: center; }
     .section-inner { padding: 60px 20px; }
@@ -924,9 +981,9 @@
   <div class="ornament" data-lang="en">Costa Rica · 2025–2026</div>
 
   <h1 class="hero-title" data-lang="es">La Materia<br>que se Pregunta</h1>
-  <h1 class="hero-title" data-lang="en">Matter That Question<br>Itself</h1>
+  <h1 class="hero-title" data-lang="en">Questioning<br>Matter</h1>
 
-  <p class="hero-subtitle" data-lang="es">Matter That Question Itself</p>
+  <p class="hero-subtitle" data-lang="es">Questioning Matter</p>
   <p class="hero-subtitle" data-lang="en">La Materia que se Pregunta</p>
 
   <div class="hero-divider"></div>
@@ -949,7 +1006,138 @@
   </div>
 </section>
 
-<!-- ============================================================ PROLOGUE -->
+<!-- ============================================================ CONNECT ====== -->
+<section id="conectar">
+  <div class="section-inner">
+    <!-- SPANISH -->
+    <div data-lang="es">
+      <div class="section-label">Conectá con el Autor y el Proyecto</div>
+      <h2 class="section-title">El Ecosistema de Investigación</h2>
+      <div class="section-divider"></div>
+      <div class="connect-links">
+        <!-- Ecosistema -->
+        <div class="connect-category">
+          <div class="connect-label">🌐 Ecosistema de Proyectos</div>
+          <div class="connect-item">
+            <a href="https://jorgebc420.github.io/MateriaQueSePregunta/">La Materia que se Pregunta</a>
+            <p>Este libro: ensayo filosófico-científico</p>
+          </div>
+          <div class="connect-item">
+            <a href="https://jorgebc420.github.io/talking_with_giant_minds/">Charlando con Mentes GIGANTES</a>
+            <p>Conversaciones y reflexiones</p>
+          </div>
+          <div class="connect-item">
+            <a href="https://bjsrce.streamlit.app/">SRCE · Simulador Matemático</a>
+            <p>Spectral Rigidity Calibration Engine</p>
+          </div>
+        </div>
+
+        <!-- Código -->
+        <div class="connect-category">
+          <div class="connect-label">💻 Código e Investigación</div>
+          <div class="connect-item">
+            <a href="https://github.com/JorgeBC420">Perfil GitHub Principal</a>
+            <p>Todos los repositorios públicos</p>
+          </div>
+          <div class="connect-item">
+            <a href="https://github.com/JorgeBC420/Spectral-Rigidity-Calibration-Engine">SRCE Repository</a>
+            <p>Motor de análisis espectral</p>
+          </div>
+          <div class="connect-item">
+            <a href="https://github.com/JorgeBC420/MonteCarloSimulatorHipotesisSectorial">Monte Carlo Simulador</a>
+            <p>Simulaciones de hipótesis sectoriales</p>
+          </div>
+        </div>
+
+        <!-- Redes -->
+        <div class="connect-category">
+          <div class="connect-label">📱 Redes y Contacto</div>
+          <div class="connect-item">
+            <a href="https://cr.linkedin.com/in/jorge-bravo-chaves-037421377">LinkedIn</a>
+            <p>Perfil profesional</p>
+          </div>
+          <div class="connect-item">
+            <a href="https://www.facebook.com/jorgebravochaves.escritor">Facebook · Escritor</a>
+            <p>Contenido y actualizaciones</p>
+          </div>
+          <div class="connect-item">
+            <a href="https://instagram.com/jorgebc420">Instagram @jorgebc420</a>
+            <p>Conexión directa</p>
+          </div>
+          <div class="connect-item">
+            <a href="https://x.com/jorgebravoch">X / Twitter @jorgebravoch</a>
+            <p>Ideas y discusiones</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ENGLISH -->
+    <div data-lang="en">
+      <div class="section-label">Connect with the Author and Project</div>
+      <h2 class="section-title">Research Ecosystem</h2>
+      <div class="section-divider"></div>
+      <div class="connect-links">
+        <!-- Ecosystem -->
+        <div class="connect-category">
+          <div class="connect-label">🌐 Project Ecosystem</div>
+          <div class="connect-item">
+            <a href="https://jorgebc420.github.io/MateriaQueSePregunta/">Questioning Matter</a>
+            <p>This book: philosophical-scientific essay</p>
+          </div>
+          <div class="connect-item">
+            <a href="https://jorgebc420.github.io/talking_with_giant_minds/">Talking with GIANT Minds</a>
+            <p>Conversations and reflections</p>
+          </div>
+          <div class="connect-item">
+            <a href="https://bjsrce.streamlit.app/">SRCE · Mathematical Simulator</a>
+            <p>Spectral Rigidity Calibration Engine</p>
+          </div>
+        </div>
+
+        <!-- Code -->
+        <div class="connect-category">
+          <div class="connect-label">💻 Code &amp; Research</div>
+          <div class="connect-item">
+            <a href="https://github.com/JorgeBC420">GitHub Main Profile</a>
+            <p>All public repositories</p>
+          </div>
+          <div class="connect-item">
+            <a href="https://github.com/JorgeBC420/Spectral-Rigidity-Calibration-Engine">SRCE Repository</a>
+            <p>Spectral analysis engine</p>
+          </div>
+          <div class="connect-item">
+            <a href="https://github.com/JorgeBC420/MonteCarloSimulatorHipotesisSectorial">Monte Carlo Simulator</a>
+            <p>Sectorial hypothesis simulations</p>
+          </div>
+        </div>
+
+        <!-- Networks -->
+        <div class="connect-category">
+          <div class="connect-label">📱 Networks &amp; Contact</div>
+          <div class="connect-item">
+            <a href="https://cr.linkedin.com/in/jorge-bravo-chaves-037421377">LinkedIn</a>
+            <p>Professional profile</p>
+          </div>
+          <div class="connect-item">
+            <a href="https://www.facebook.com/jorgebravochaves.escritor">Facebook · Writer</a>
+            <p>Content and updates</p>
+          </div>
+          <div class="connect-item">
+            <a href="https://instagram.com/jorgebc420">Instagram @jorgebc420</a>
+            <p>Direct connection</p>
+          </div>
+          <div class="connect-item">
+            <a href="https://x.com/jorgebravoch">X / Twitter @jorgebravoch</a>
+            <p>Ideas and discussions</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ PROLOGUE ====== -->
 <section id="prologo">
   <div class="section-inner">
     <!-- SPANISH -->
@@ -1109,7 +1297,7 @@
         </div>
         <div class="chapter-item">
           <div class="chapter-num">Chapter IX</div>
-          <div class="chapter-title">Matter That Question Itself</div>
+          <div class="chapter-title">Questioning Matter</div>
           <div class="chapter-desc">Synthesis of the chain of emergences. The five original concepts. SRCE as instrument. The responsibility.</div>
         </div>
       </div>
@@ -1326,7 +1514,7 @@
           <p>Jorge Eduardo Bravo Chaves (1992) is a Costa Rican autodidactic independent researcher and software developer, with a background spanning computer science, industrial electrical systems, and scientific computing.</p>
           <p>His work focuses on the intersection of physics, neuroscience, and complex systems. He is the creator of the <strong>Spectral Rigidity Calibration Engine (SRCE)</strong>, a mathematical analysis system oriented toward the study of spectral distributions and their relationship to properties of complex systems at the boundary between order and chaos.</p>
           <p>He is also the creator of the <strong>Epistemic Audit Protocol (PAE)</strong>, oriented toward the structured evaluation of information in high-complexity contexts.</p>
-          <p>In addition to his technical work, he is the author of <em>Matter That Question Itself</em> and of the poetry collection <em>Vida: Amor &amp; Depresión</em>, where he explores human experience from an introspective and metacognitive perspective.</p>
+          <p>In addition to his technical work, he is the author of <em>Questioning Matter</em> and of the poetry collection <em>Vida: Amor &amp; Depresión</em>, where he explores human experience from an introspective and metacognitive perspective.</p>
           <p style="color:var(--text-dim);font-style:italic;font-size:0.95rem">This book was written during a period of considerable personal pressure, with the tools available and the social substrate that made completing it possible. It is distributed freely because knowledge that does not reach its reader has not fulfilled its purpose.</p>
         </div>
       </div>
@@ -1490,7 +1678,7 @@ function setLang(lang) {
   document.documentElement.lang = lang === 'en' ? 'en' : 'es';
   // Update page title
   document.title = lang === 'en'
-    ? 'Matter That Question Itself · Jorge Eduardo Bravo Chaves'
+    ? 'Questioning Matter · Jorge Eduardo Bravo Chaves'
     : 'La Materia que se Pregunta · Jorge Eduardo Bravo Chaves';
   // Save preference
   try { localStorage.setItem('lang', lang); } catch(e) {}
