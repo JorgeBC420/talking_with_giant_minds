@@ -267,30 +267,13 @@ export default function App() {
         <div className="flex-1 overflow-y-auto p-5 md:p-6 font-mono text-sm space-y-8 scrollbar-thin scrollbar-thumb-[#2a2a35] scrollbar-track-transparent bg-black/80">
 
           <a
-            href={`${import.meta.env.BASE_URL}charlando_mentes_gigantes.pdf`}
+            href="/charlando_mentes_gigantes.pdf"
             download="Jorge_Bravo_Chaves_Charlando_con_Mentes_GIGANTES_BILINGUE.pdf"
             className="flex items-center justify-center gap-2 w-full py-2.5 bg-white/5 text-white border border-white/20 rounded hover:bg-white/10 transition-colors text-xs font-bold tracking-widest uppercase shadow-md"
           >
             <Download size={15} /> {language === 'es' ? 'Descargar PDF Bilingüe' : 'Download Bilingual PDF'}
           </a>
           
-          {/* Title Area */}
-          <div className="space-y-4">
-            <div className="flex items-center gap-2 mb-2 text-white/80">
-              <Code size={16}/> <span className="text-xs">/home/jorge/projects/libros</span>
-            </div>
-            <h1 className="text-2xl font-serif text-white tracking-tight border-l-2 border-white/30 pl-3 leading-snug">
-              {language === 'en' ? (
-                <>Conversing with <br/><span className="text-white font-bold italic">GIANT Minds</span></>
-              ) : (
-                <>Charlando con <br/><span className="text-white font-bold italic">Mentes GIGANTES</span></>
-              )}
-            </h1>
-            <p className="text-[#8b949e]">
-              {language === 'en' ? 'By ' : 'Por '}<span className="text-white">Jorge Bravo Chaves</span>
-            </p>
-          </div>
-
           {/* NEW SECTION: Connect with the Author and the Project */}
           <div className="space-y-4 border-t border-white/10 pt-4">
             <p className="text-amber-500 text-xs font-bold uppercase tracking-widest flex items-center gap-2">
@@ -323,6 +306,23 @@ export default function App() {
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* Title Area */}
+          <div className="space-y-4">
+            <div className="flex items-center gap-2 mb-2 text-white/80">
+              <Code size={16}/> <span className="text-xs">/home/jorge/projects/libros</span>
+            </div>
+            <h1 className="text-2xl font-serif text-white tracking-tight border-l-2 border-white/30 pl-3 leading-snug">
+              {language === 'en' ? (
+                <>Conversing with <br/><span className="text-white font-bold italic">GIANT Minds</span></>
+              ) : (
+                <>Charlando con <br/><span className="text-white font-bold italic">Mentes GIGANTES</span></>
+              )}
+            </h1>
+            <p className="text-[#8b949e]">
+              {language === 'en' ? 'By ' : 'Por '}<span className="text-white">Jorge Bravo Chaves</span>
+            </p>
           </div>
 
           {/* MOVED: Support the Work */}
