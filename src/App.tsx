@@ -291,9 +291,74 @@ export default function App() {
             </p>
           </div>
 
+          {/* NEW SECTION: Connect with the Author and the Project */}
+          <div className="space-y-4 border-t border-white/10 pt-4">
+            <p className="text-amber-500 text-xs font-bold uppercase tracking-widest flex items-center gap-2">
+              <Globe size={14} /> {language === 'en' ? 'Connect with Author' : 'Conectá con el Autor y el Proyecto'}
+            </p>
+            <div className="space-y-3 text-[11px] text-[#8b949e] font-mono">
+              <div>
+                <p className="text-white/80 font-bold mb-1">🌐 {language === 'en' ? 'Ecosystem:' : 'Ecosistema:'}</p>
+                <div className="flex flex-wrap gap-2">
+                  <a href="https://jorgebc420.github.io/talking_with_giant_minds/" target="_blank" rel="noreferrer" className="hover:text-amber-500 transition-colors underline decoration-amber-500/30">[La Materia que se Pregunta]</a>
+                  <a href="https://jorgebc420.github.io/MateriaQueSePregunta/" target="_blank" rel="noreferrer" className="hover:text-amber-500 transition-colors underline decoration-amber-500/30">[Charlando con Mentes GIGANTES]</a>
+                  <a href="https://streamlit.app" target="_blank" rel="noreferrer" className="hover:text-amber-500 transition-colors underline decoration-amber-500/30">[Simulador Matemático SRCE]</a>
+                </div>
+              </div>
+              <div>
+                <p className="text-white/80 font-bold mb-1">💻 {language === 'en' ? 'Code & Research:' : 'Código e Investigación:'}</p>
+                <div className="flex flex-col gap-1">
+                  <a href="https://github.com/JorgeBC420" target="_blank" rel="noreferrer" className="hover:text-amber-500 transition-colors">[GitHub Repositorio]</a>
+                  <a href="https://github.com/JorgeBC420/MonteCarloSimulatorHipotesisSectorial" target="_blank" rel="noreferrer" className="hover:text-amber-500 transition-colors truncate">/MonteCarloSimulatorHipotesisSectorial</a>
+                  <a href="https://github.com/JorgeBC420/Spectral-Rigidity-Calibration-Engine" target="_blank" rel="noreferrer" className="hover:text-amber-500 transition-colors truncate">/Spectral-Rigidity-Calibration-Engine</a>
+                </div>
+              </div>
+              <div>
+                <p className="text-white/80 font-bold mb-1">📱 {language === 'en' ? 'Social & Contact:' : 'Redes y Contacto:'}</p>
+                <div className="flex flex-wrap gap-x-3 gap-y-1">
+                  <a href="https://cr.linkedin.com/in/jorge-bravo-chaves-037421377" target="_blank" rel="noreferrer" className="hover:text-amber-500 transition-colors">[LinkedIn]</a>
+                  <a href="https://www.facebook.com/jorgebravochaves.escritor" target="_blank" rel="noreferrer" className="hover:text-amber-500 transition-colors">[Facebook Escritor]</a>
+                  <a href="https://instagram.com/jorgebc420" target="_blank" rel="noreferrer" className="hover:text-amber-500 transition-colors">@jorgebc420</a>
+                  <a href="https://x.com/jorgebravoch" target="_blank" rel="noreferrer" className="hover:text-amber-500 transition-colors">@jorgebravoch</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* MOVED: Support the Work */}
+          <div className="space-y-3 border-t border-white/10 pt-4">
+            <p className="text-amber-500 text-xs font-bold uppercase tracking-widest flex items-center gap-2">
+              <Heart size={14} /> {language === 'en' ? 'Support the Work' : 'Apoyo a la Obra'}
+            </p>
+            <div className="flex flex-col gap-2 font-mono">
+              <a href="https://ko-fi.com/jorgebravochaves" target="_blank" rel="noreferrer" className="flex items-center gap-3 text-[11px] bg-[#1a1a24] border border-[#2a2a35] p-2.5 rounded-md hover:border-amber-500 hover:text-amber-100 transition-all group">
+                <span className="text-[#8b949e] group-hover:text-amber-500">[ko-fi]</span>
+                <span>/jorgebravochaves</span>
+              </a>
+              <a href="https://paypal.me/JorgeBravoChaves" target="_blank" rel="noreferrer" className="flex items-center gap-3 text-[11px] bg-[#1a1a24] border border-[#2a2a35] p-2.5 rounded-md hover:border-amber-500 hover:text-amber-100 transition-all group">
+                <span className="text-[#8b949e] group-hover:text-amber-500">[paypal]</span>
+                <span>@JorgeBravoChaves</span>
+              </a>
+              <div className="flex items-center justify-between text-[11px] bg-[#181822] border border-[#2a2a35] p-2.5 rounded-md">
+                <span className="text-[#8b949e] font-mono">[SINPE_Móvil]</span>
+                <span className="text-amber-500 font-mono tracking-wider">71880297</span>
+              </div>
+            </div>
+          </div>
+
+          {/* MOVED: License */}
+          <div className="space-y-2 border-t border-white/10 pt-4">
+            <p className="text-amber-500 text-xs font-bold uppercase tracking-widest flex items-center gap-2">
+              <ShieldCheck size={14} /> {language === 'en' ? 'License' : 'Licencia'}
+            </p>
+            <p className="text-[11px] text-[#8b949e] leading-relaxed">
+              {language === 'en' ? 'Distributed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 (CC BY-NC-SA 4.0).' : 'Distribuido bajo la licencia Creative Commons Atribución-NoComercial-CompartirIgual 4.0 (CC BY-NC-SA 4.0).'}
+            </p>
+          </div>
+
           {/* Interaction Menu */}
-          <div className="space-y-2">
-            <p className="text-white/80 text-xs font-bold uppercase tracking-widest mb-3 flex items-center gap-2">
+          <div className="space-y-4 border-t border-white/10 pt-4">
+            <p className="text-amber-500 text-xs font-bold uppercase tracking-widest flex items-center gap-2">
               <Terminal size={14}/>
               {language === 'en' ? '~/Module_Catalog' : '~/_Catálogo_Módulos'}
             </p>
@@ -342,38 +407,6 @@ export default function App() {
             </ul>
           </div>
 
-          {/* Legal and Support */}
-          <div className="pt-6 border-t border-[#2a2a35] space-y-6">
-            <div className="space-y-2">
-              <p className="text-amber-500 text-xs font-bold uppercase tracking-widest flex items-center gap-2">
-                <ShieldCheck size={14} /> {language === 'en' ? 'License' : 'Licencia'}
-              </p>
-              <p className="text-[11px] text-[#8b949e] leading-relaxed">
-                {language === 'en' ? 'Distributed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 (CC BY-NC-SA 4.0).' : 'Distribuido bajo la licencia Creative Commons Atribución-NoComercial-CompartirIgual 4.0 (CC BY-NC-SA 4.0).'}
-              </p>
-            </div>
-
-            <div className="space-y-3 pb-8">
-              <p className="text-amber-500 text-xs font-bold uppercase tracking-widest flex items-center gap-2">
-                <Heart size={14} /> {language === 'en' ? 'Support the Work' : 'Apoyo a la Obra'}
-              </p>
-              <div className="flex flex-col gap-2 mt-2 font-mono">
-                <a href="https://ko-fi.com/jorgebravochaves" target="_blank" rel="noreferrer" className="flex items-center gap-3 text-[11px] bg-[#1a1a24] border border-[#2a2a35] p-2.5 rounded-md hover:border-amber-500 hover:text-amber-100 transition-all group">
-                  <span className="text-[#8b949e] group-hover:text-amber-500">[ko-fi]</span>
-                  <span>/jorgebravochaves</span>
-                </a>
-                <a href="https://paypal.me/JorgeBravoChaves" target="_blank" rel="noreferrer" className="flex items-center gap-3 text-[11px] bg-[#1a1a24] border border-[#2a2a35] p-2.5 rounded-md hover:border-amber-500 hover:text-amber-100 transition-all group">
-                  <span className="text-[#8b949e] group-hover:text-amber-500">[paypal]</span>
-                  <span>@JorgeBravoChaves</span>
-                </a>
-                <div className="flex items-center justify-between text-[11px] bg-[#181822] border border-[#2a2a35] p-2.5 rounded-md">
-                  <span className="text-[#8b949e] font-mono">[SINPE_Móvil]</span>
-                  <span className="text-amber-500 font-mono tracking-wider">71880297</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          
         </div>
         
         {/* Laptop keyboard base simulation */}
