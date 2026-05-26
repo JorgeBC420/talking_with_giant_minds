@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+<<<<<<< HEAD
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:mobile="http://www.mobile.googlebot.com/schemas/mobile-sitemaps/1.0"
@@ -13,4 +14,105 @@
   <xhtml:link rel="alternate" hreflang="es" href="https://jorgebc420.github.io/MateriaQueSePregunta/" />
   <xhtml:link rel="alternate" hreflang="en" href="https://jorgebc420.github.io/MateriaQueSePregunta/?lang=en" />
  </url>
+=======
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Home page -->
+  <url>
+    <loc>https://jorgebc420.github.io/talking_with_giant_minds/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Index page -->
+  <url>
+    <loc>https://jorgebc420.github.io/talking_with_giant_minds/index.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- PDF Download -->
+  <url>
+    <loc>https://jorgebc420.github.io/talking_with_giant_minds/Charlando_con_Mentes_GIGANTES_BILINGUE.pdf</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Documentation files (if served) -->
+  <url>
+    <loc>https://jorgebc420.github.io/talking_with_giant_minds/README.md</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://jorgebc420.github.io/talking_with_giant_minds/metadata.json</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Anchored sections of main page -->
+  <url>
+    <loc>https://jorgebc420.github.io/talking_with_giant_minds/index.html#indice</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://jorgebc420.github.io/talking_with_giant_minds/index.html#acerca</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://jorgebc420.github.io/talking_with_giant_minds/index.html#autor</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://jorgebc420.github.io/talking_with_giant_minds/index.html#licencia</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://jorgebc420.github.io/talking_with_giant_minds/index.html#apoyo</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- Guide files -->
+  <url>
+    <loc>https://jorgebc420.github.io/talking_with_giant_minds/PDF_GENERATION_GUIDE.md</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://jorgebc420.github.io/talking_with_giant_minds/BILINGUAL_STRUCTURE_EXAMPLE.md</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://jorgebc420.github.io/talking_with_giant_minds/QUICK_START.md</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+
+>>>>>>> 97e7b24d66dd18ca9de19e2c80d7e02b8250f4a8
 </urlset>

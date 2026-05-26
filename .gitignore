@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # OS
 .DS_Store
 Thumbs.db
@@ -27,3 +28,13 @@ yarn.lock
 # Build
 dist/
 build/
+=======
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+>>>>>>> 97e7b24d66dd18ca9de19e2c80d7e02b8250f4a8
