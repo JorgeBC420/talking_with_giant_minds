@@ -1,37 +1,3 @@
-<<<<<<< HEAD
-# Robots.txt - La Materia que se Pregunta
-# https://jorgebc420.github.io/MateriaQueSePregunta/
-
-# Allow all search engines
-User-agent: *
-Allow: /
-Disallow: /.*\.git/
-Disallow: /.github/
-Disallow: .*\.docx$
-Disallow: .*\.md$
-
-# Specific search engine rules
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 0
-
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 0
-
-# Disallow bad bots
-User-agent: MJ12bot
-Disallow: /
-
-User-agent: AhrefsBot
-Disallow: /
-
-User-agent: SemrushBot
-Disallow: /
-
-# Sitemap location
-Sitemap: https://jorgebc420.github.io/MateriaQueSePregunta/sitemap.xml
-=======
 # robots.txt for Charlando con Mentes GIGANTES
 # https://jorgebc420.github.io/talking_with_giant_minds/
 
@@ -65,4 +31,3 @@ Sitemap: https://jorgebc420.github.io/talking_with_giant_minds/sitemap.xml
 
 # Cache behavior
 Cache-Control: max-age=604800
->>>>>>> 97e7b24d66dd18ca9de19e2c80d7e02b8250f4a8

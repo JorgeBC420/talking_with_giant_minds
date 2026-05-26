@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # La Materia que se Pregunta
 
 Un ensayo filosófico-científico sobre la realidad, la conciencia y la materia que se interroga a sí misma.
@@ -370,9 +369,3 @@ SNR_tail_Q99 = (Q99_sectorial − Q99_base) / σ_ruido
 ---
 
 ## Referencias
-
-- Aghanim et al. (Planck Collaboration, 2018). *A&A* 641, A6.
-- ALMA Observatory (2025). Oxygen in most distant known galaxy.
-- Bravo Chaves, J. E. (2026). *Hipótesis de Transición Sectorial Cosmológica v3.1*. Investigación independiente, San José, Costa Rica.
->>>>>>> 97e7b24d66dd18ca9de19e2c80d7e02b8250f4a8
-

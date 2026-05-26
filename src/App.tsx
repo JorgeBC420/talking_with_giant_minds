@@ -267,7 +267,7 @@ export default function App() {
         <div className="flex-1 overflow-y-auto p-5 md:p-6 font-mono text-sm space-y-8 scrollbar-thin scrollbar-thumb-[#2a2a35] scrollbar-track-transparent bg-black/80">
 
           <a
-            href="/charlando_mentes_gigantes.pdf"
+            href={`${import.meta.env.BASE_URL}charlando_mentes_gigantes.pdf`}
             download="Jorge_Bravo_Chaves_Charlando_con_Mentes_GIGANTES_BILINGUE.pdf"
             className="flex items-center justify-center gap-2 w-full py-2.5 bg-white/5 text-white border border-white/20 rounded hover:bg-white/10 transition-colors text-xs font-bold tracking-widest uppercase shadow-md"
           >

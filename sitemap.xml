@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-<<<<<<< HEAD
-        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml"
-        xmlns:mobile="http://www.mobile.googlebot.com/schemas/mobile-sitemaps/1.0"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
- <url>
-  <loc>https://jorgebc420.github.io/MateriaQueSePregunta/</loc>
-  <lastmod>2026-05-07</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>1.0</priority>
-  <xhtml:link rel="alternate" hreflang="es" href="https://jorgebc420.github.io/MateriaQueSePregunta/" />
-  <xhtml:link rel="alternate" hreflang="en" href="https://jorgebc420.github.io/MateriaQueSePregunta/?lang=en" />
- </url>
-=======
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  
+>
   <!-- Home page -->
   <url>
     <loc>https://jorgebc420.github.io/talking_with_giant_minds/</loc>
@@ -114,5 +99,4 @@
     <priority>0.65</priority>
   </url>
 
->>>>>>> 97e7b24d66dd18ca9de19e2c80d7e02b8250f4a8
 </urlset>
