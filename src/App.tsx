@@ -282,10 +282,11 @@ export default function App() {
             <div className="space-y-3 text-[11px] text-[#8b949e] font-mono">
               <div>
                 <p className="text-white/80 font-bold mb-1">🌐 {language === 'en' ? 'Ecosystem:' : 'Ecosistema:'}</p>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-col gap-1">
                   <a href="https://jorgebc420.github.io/talking_with_giant_minds/" target="_blank" rel="noreferrer" className="hover:text-amber-500 transition-colors underline decoration-amber-500/30">[La Materia que se Pregunta]</a>
                   <a href="https://jorgebc420.github.io/MateriaQueSePregunta/" target="_blank" rel="noreferrer" className="hover:text-amber-500 transition-colors underline decoration-amber-500/30">[Charlando con Mentes GIGANTES]</a>
-                  <a href="https://streamlit.app" target="_blank" rel="noreferrer" className="hover:text-amber-500 transition-colors underline decoration-amber-500/30">[Simulador Matemático SRCE]</a>
+                  <a href="https://bjsrce.streamlit.app/" target="_blank" rel="noreferrer" className="hover:text-amber-500 transition-colors underline decoration-amber-500/30">[Simulador Matemático SRCE]</a>
+                  <a href="https://jorgebc420.github.io/MonteCarloSimulatorHipotesisSectorial/" target="_blank" rel="noreferrer" className="hover:text-amber-500 transition-colors underline decoration-amber-500/30">[Monte Carlo Simulator]</a>
                 </div>
               </div>
               <div>
